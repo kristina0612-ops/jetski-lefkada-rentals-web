@@ -8,6 +8,9 @@ export interface Jetski {
   seats: number;
   hp: number;
   topSpeed: number;
+  price10min: number;
+  price20min: number;
+  price30min: number;
   pricePerHour: number;
   priceHalfDay: number;
   priceFullDay: number;
@@ -29,6 +32,9 @@ export const jetskis: Jetski[] = [
     seats: 3,
     hp: 180,
     topSpeed: 104,
+    price10min: 30,
+    price20min: 50,
+    price30min: 65,
     pricePerHour: 95,
     priceHalfDay: 290,
     priceFullDay: 490,
@@ -48,6 +54,9 @@ export const jetskis: Jetski[] = [
     seats: 3,
     hp: 300,
     topSpeed: 110,
+    price10min: 45,
+    price20min: 75,
+    price30min: 95,
     pricePerHour: 140,
     priceHalfDay: 420,
     priceFullDay: 690,
@@ -67,6 +76,9 @@ export const jetskis: Jetski[] = [
     seats: 3,
     hp: 250,
     topSpeed: 107,
+    price10min: 38,
+    price20min: 65,
+    price30min: 80,
     pricePerHour: 120,
     priceHalfDay: 360,
     priceFullDay: 590,
@@ -86,6 +98,9 @@ export const jetskis: Jetski[] = [
     seats: 2,
     hp: 90,
     topSpeed: 80,
+    price10min: 22,
+    price20min: 38,
+    price30min: 50,
     pricePerHour: 70,
     priceHalfDay: 210,
     priceFullDay: 350,

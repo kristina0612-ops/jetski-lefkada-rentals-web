@@ -1,0 +1,26 @@
+---
+import LayoutBare from "../../layouts/LayoutBare.astro";
+import Navbar3 from "../../components/v3/Navbar3.astro";
+import Hero3 from "../../components/v3/Hero3.astro";
+import Fleet3 from "../../components/v3/Fleet3.astro";
+import BookingForm3 from "../../components/v3/BookingForm3.astro";
+import Rest3 from "../../components/v3/Rest3.astro";
+import WhatsAppFab from "../../components/WhatsAppFab.astro";
+import "../../styles/v3-sunset.css";
+---
+
+<LayoutBare
+  lang="el"
+  title="Ενοικίαση Jet Ski Λευκάδα | Νοικιάστε Jet Ski στη Λευκάδα"
+  description="Ενοικίαση jet ski στη Λευκάδα. Τέσσερις μηχανές, πλήρως αδειοδοτημένες, οικογενειακή επιχείρηση. Από €70/ώρα — κλείσε online σε 90 δευτερόλεπτα."
+  themeColor="#0a0614"
+>
+  <div class="v3">
+    <Navbar3 lang="el" />
+    <Hero3 lang="el" />
+    <Fleet3 lang="el" />
+    <BookingForm3 lang="el" />
+    <Rest3 lang="el" />
+    <WhatsAppFab />
+  </div>
+</LayoutBare>

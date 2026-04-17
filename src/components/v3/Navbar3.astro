@@ -1,15 +1,31 @@
 ---
+import type { Lang } from "../../i18n/translations";
+import { getT } from "../../i18n/translations";
+
+interface Props {
+  lang?: Lang;
+}
+const { lang = "en" } = Astro.props;
+const t = getT(lang);
+
 const links = [
-  { href: "#fleet", label: "Fleet" },
-  { href: "#how", label: "How" },
-  { href: "#voices", label: "Voices" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#fleet", label: t.nav.fleet },
+  { href: "#how", label: t.nav.how },
+  { href: "#voices", label: t.nav.voices },
+  { href: "#faq", label: t.nav.faq },
+  { href: "#book", label: t.nav.book },
+];
+
+const langLinks: Array<{ code: Lang; href: string }> = [
+  { code: "en", href: "/" },
+  { code: "de", href: "/de" },
+  { code: "el", href: "/el" },
 ];
 ---
 
 <nav class="absolute top-0 left-0 right-0 z-40 pointer-events-none pt-20 lg:pt-24">
   <div class="pointer-events-auto mx-auto max-w-[1700px] px-6 lg:px-12 flex items-center justify-between">
-    <a href="/v3" class="group flex items-center gap-3" aria-label="Jetski Lefkada Rentals home">
+    <a href="/" class="group flex items-center gap-3" aria-label="Jetski Lefkada Rentals home">
       <span class="font-display italic text-3xl leading-none" style="background: linear-gradient(135deg, #ff4420, #ff2d87); -webkit-background-clip: text; background-clip: text; color: transparent;">Jetski</span>
       <span class="font-mono text-[10px] uppercase tracking-[0.22em]" style="color: var(--v3-peach-300);">Lefkada / GR</span>
     </a>
@@ -30,10 +46,27 @@ const links = [
           </a>
         ))
       }
+
+      <!-- Language switcher -->
+      <div class="flex items-center gap-1 ml-2 border-l pl-4" style="border-color: rgba(255,230,212,0.2);">
+        {langLinks.map(({ code, href }) => (
+          <a
+            href={href}
+            class="font-mono text-[10px] uppercase tracking-[0.16em] px-1.5 py-0.5 rounded transition-all duration-300"
+            style={lang === code
+              ? "color: #ff4420; background: rgba(255,68,32,0.15);"
+              : "color: rgba(255,230,212,0.45);"}
+            aria-label={`Switch to ${code.toUpperCase()}`}
+            aria-current={lang === code ? "true" : undefined}
+          >
+            {code.toUpperCase()}
+          </a>
+        ))}
+      </div>
     </div>
 
-    <a href="#fleet" class="v3-btn !py-3 !px-5 !text-xs">
-      Reserve
+    <a href="#book" class="v3-btn !py-3 !px-5 !text-xs">
+      {t.nav.reserve}
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
         <path d="M5 12h14M13 5l7 7-7 7"/>
       </svg>

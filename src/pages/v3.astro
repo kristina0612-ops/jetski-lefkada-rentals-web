@@ -4,20 +4,24 @@ import VariationSwitcher from "../components/VariationSwitcher.astro";
 import Navbar3 from "../components/v3/Navbar3.astro";
 import Hero3 from "../components/v3/Hero3.astro";
 import Fleet3 from "../components/v3/Fleet3.astro";
+import BookingForm3 from "../components/v3/BookingForm3.astro";
 import Rest3 from "../components/v3/Rest3.astro";
+import WhatsAppFab from "../components/WhatsAppFab.astro";
 import "../styles/v3-sunset.css";
 ---
 
 <LayoutBare
   title="V3 Sunset Rider · Jetski Lefkada Rentals"
-  description="Cinematic dark warm sunset experience with vortex particles and full-bleed imagery."
+  description="Cinematic dark warm sunset experience."
   themeColor="#0a0614"
 >
   <VariationSwitcher current="v3" />
   <div class="v3">
-    <Navbar3 />
-    <Hero3 />
-    <Fleet3 />
-    <Rest3 />
+    <Navbar3 lang="en" />
+    <Hero3 lang="en" />
+    <Fleet3 lang="en" />
+    <BookingForm3 lang="en" />
+    <Rest3 lang="en" />
+    <WhatsAppFab />
   </div>
 </LayoutBare>

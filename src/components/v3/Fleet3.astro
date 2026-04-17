@@ -1,17 +1,24 @@
 ---
 import { jetskis } from "../../data/jetskis";
+import type { Lang } from "../../i18n/translations";
+import { getT } from "../../i18n/translations";
+
+interface Props {
+  lang?: Lang;
+}
+const { lang = "en" } = Astro.props;
+const t = getT(lang);
 ---
 
 <section id="fleet" class="relative py-24 lg:py-40 overflow-hidden">
-  <!-- Ambient background -->
   <div class="v3-orb top-[20%] left-[40%] w-[700px] h-[700px]" style="background: #ff4420; opacity: 0.2;"></div>
 
   <div class="relative mx-auto max-w-[1700px] px-6 lg:px-12">
     <div class="grid grid-cols-12 gap-6 mb-16 lg:mb-24">
       <div class="col-span-12 lg:col-span-9">
-        <div class="v3-eyebrow mb-6"><span>The Machines · Curated fleet</span></div>
+        <div class="v3-eyebrow mb-6"><span>{t.fleet.eyebrow}</span></div>
         <h2 class="v3-display text-5xl lg:text-[clamp(4rem,8vw,9rem)]">
-          Four <em>weapons.</em><br />One captain.
+          {t.fleet.h2Line1} <em>{t.fleet.h2Line2}</em><br />{t.fleet.h2Line3}
         </h2>
       </div>
     </div>
@@ -22,15 +29,13 @@ import { jetskis } from "../../data/jetskis";
           const even = i % 2 === 0;
           const scarcity =
             js.availableToday === 0
-              ? "Booked out today"
+              ? t.fleet.bookedOut
               : js.availableToday === 1
-                ? "Last 1 today"
-                : `${js.availableToday} available`;
+                ? t.fleet.lastOne
+                : `${js.availableToday} ${t.fleet.available}`;
           return (
             <article
-              class:list={[
-                "v3-magnetic group relative grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-[2rem] border",
-              ]}
+              class:list={["v3-magnetic group relative grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-[2rem] border"]}
               style="background: linear-gradient(135deg, rgba(20,10,34,0.8), rgba(10,6,20,0.6)); border-color: rgba(255,181,138,0.15); backdrop-filter: blur(20px);"
             >
               {/* Image side */}
@@ -42,25 +47,18 @@ import { jetskis } from "../../data/jetskis";
                   class="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                   style="filter: contrast(1.15) brightness(0.85) saturate(1.3) hue-rotate(-8deg);"
                 />
-                {/* Sunset overlay */}
                 <div class="absolute inset-0 pointer-events-none mix-blend-overlay opacity-80" style={`background: linear-gradient(135deg, ${js.accent}, transparent 50%, #ff2d87 150%)`}></div>
                 <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(90deg, rgba(10,6,20,0.5) 0%, transparent 30%, transparent 70%, rgba(10,6,20,0.8) 100%);"></div>
-
-                {/* Huge number overlay */}
                 <div
                   class:list={["absolute top-6 font-display italic text-[10rem] leading-[0.7] pointer-events-none select-none z-10", even ? "left-8" : "right-8"]}
                   style="background: linear-gradient(180deg, rgba(255,230,212,0.9), rgba(255,68,32,0.3)); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 200;"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </div>
-
-                {/* Availability chip */}
                 <div class="absolute bottom-6 left-6 px-4 py-2 rounded-full backdrop-blur-md" style="background: rgba(10,6,20,0.7); border: 1px solid rgba(255,181,138,0.3);">
                   <span class="flex items-center gap-2">
                     <span class:list={["w-2 h-2 rounded-full", js.availableToday === 0 ? "bg-gray-500" : js.availableToday === 1 ? "bg-orange-400 v3-pulse" : "bg-green-400 v3-pulse"]}></span>
-                    <span class="font-mono text-[10px] uppercase tracking-[0.16em]" style="color: var(--v3-peach-100);">
-                      {scarcity}
-                    </span>
+                    <span class="font-mono text-[10px] uppercase tracking-[0.16em]" style="color: var(--v3-peach-100);">{scarcity}</span>
                   </span>
                 </div>
               </div>
@@ -77,9 +75,9 @@ import { jetskis } from "../../data/jetskis";
                   {/* Spec bars */}
                   <div class="space-y-3 mb-8">
                     {[
-                      { label: "Power", value: `${js.hp} HP`, pct: Math.min(100, (js.hp / 300) * 100) },
-                      { label: "Top speed", value: `${js.topSpeed} km/h`, pct: Math.min(100, (js.topSpeed / 115) * 100) },
-                      { label: "Seats", value: `${js.seats} people`, pct: (js.seats / 3) * 100 },
+                      { label: t.fleet.power, value: `${js.hp} HP`, pct: Math.min(100, (js.hp / 300) * 100) },
+                      { label: t.fleet.topSpeed, value: `${js.topSpeed} km/h`, pct: Math.min(100, (js.topSpeed / 115) * 100) },
+                      { label: t.fleet.seats, value: `${js.seats}`, pct: (js.seats / 3) * 100 },
                     ].map((s) => (
                       <div>
                         <div class="flex items-baseline justify-between mb-1.5">
@@ -106,21 +104,37 @@ import { jetskis } from "../../data/jetskis";
 
                 <div>
                   {/* Price */}
-                  <div class="flex items-end justify-between mb-6 pb-6 border-b" style="border-color: rgba(255,230,212,0.15);">
-                    <div>
-                      <div class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color: var(--v3-peach-300);">From</div>
-                      <div class="v3-display text-5xl mt-1"><em>€{js.pricePerHour}</em></div>
-                      <div class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color: var(--v3-peach-300);">per hour · incl. VAT</div>
+                  <div class="mb-6 pb-6 border-b" style="border-color: rgba(255,230,212,0.15);">
+                    <div class="flex items-end justify-between mb-4">
+                      <div>
+                        <div class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color: var(--v3-peach-300);">{t.fleet.from}</div>
+                        <div class="v3-display text-5xl mt-1"><em>€{js.price10min}</em></div>
+                        <div class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color: var(--v3-peach-300);">10 min · {t.fleet.inclVat}</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color: var(--v3-peach-300);">{t.fleet.halfDay}</div>
+                        <div class="font-display text-2xl mt-1" style="color: var(--v3-peach-100);">€{js.priceHalfDay}</div>
+                        <div class="font-mono text-[10px] uppercase tracking-[0.18em] mt-1" style="color: var(--v3-peach-300);">{t.fleet.fullDay} €{js.priceFullDay}</div>
+                      </div>
                     </div>
-                    <div class="text-right">
-                      <div class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color: var(--v3-peach-300);">Half day</div>
-                      <div class="font-display text-2xl mt-1" style="color: var(--v3-peach-100);">€{js.priceHalfDay}</div>
-                      <div class="font-mono text-[10px] uppercase tracking-[0.18em] mt-1" style="color: var(--v3-peach-300);">Full day €{js.priceFullDay}</div>
+                    <div class="grid grid-cols-3 gap-2">
+                      {[
+                        { label: "10 min", price: js.price10min },
+                        { label: "20 min", price: js.price20min },
+                        { label: "30 min", price: js.price30min },
+                      ].map((row) => (
+                        <div class="text-center p-2 rounded-lg" style="background: rgba(255,230,212,0.06);">
+                          <div class="font-mono text-[9px] uppercase tracking-[0.14em]" style="color: var(--v3-peach-300);">{row.label}</div>
+                          <div class="font-display text-lg mt-0.5" style="color: var(--v3-peach-100);">€{row.price}</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
                   <a
-                    href={`#book-${js.id}`}
+                    href={`https://wa.me/306955612777?text=Hi%2C%20I%27d%20like%20to%20book%20${encodeURIComponent(js.name + " – " + js.brand + " " + js.model)}`}
+                    target="_blank"
+                    rel="noopener"
                     class:list={[
                       "w-full flex items-center justify-center gap-2 py-4 font-mono text-[11px] uppercase tracking-[0.2em] font-semibold rounded-full transition-all duration-500",
                       js.availableToday === 0 && "opacity-40 cursor-not-allowed pointer-events-none",
@@ -132,7 +146,7 @@ import { jetskis } from "../../data/jetskis";
                     }
                     data-cro={`v3-fleet-book-${js.id}`}
                   >
-                    {js.availableToday === 0 ? "Join waitlist" : "Reserve this machine"}
+                    {js.availableToday === 0 ? t.fleet.waitlist : t.fleet.reserve}
                     {js.availableToday > 0 && (
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                         <path d="M5 12h14M13 5l7 7-7 7"/>
@@ -149,7 +163,6 @@ import { jetskis } from "../../data/jetskis";
   </div>
 
   <script>
-    // 3D tilt on magnetic cards
     const cards = document.querySelectorAll<HTMLElement>(".v3-magnetic");
     cards.forEach((card) => {
       card.addEventListener("mousemove", (e) => {
@@ -158,9 +171,7 @@ import { jetskis } from "../../data/jetskis";
         const y = (e.clientY - rect.top) / rect.height - 0.5;
         card.style.transform = `perspective(1200px) rotateX(${-y * 2}deg) rotateY(${x * 2}deg)`;
       });
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "";
-      });
+      card.addEventListener("mouseleave", () => { card.style.transform = ""; });
     });
   </script>
 </section>
