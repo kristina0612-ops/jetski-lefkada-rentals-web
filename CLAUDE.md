@@ -19,16 +19,18 @@ Lies diese Datei ZUERST, bevor du antwortest.
 
 ## Unsere Flotte
 
-Quelle der Wahrheit: `src/data/jetskis.ts` – diese Werte sind autoritativ.
+Quelle der Wahrheit: `src/data/jetskis.ts` und `DECISIONS.md` – diese Werte sind autoritativ.
+
+Stand 2026-04-17: Nur noch Sea-Doo. Yamahas ausgemustert/verkauft.
 
 | Name           | Marke    | Modell         | PS  | Sitze | Top-Speed | €/Std | €/½-Tag | €/Tag |
 |----------------|----------|----------------|-----|-------|-----------|-------|---------|-------|
-| The Cruiser    | Yamaha   | VX Cruiser HO  | 180 | 3     | 104 km/h  | €95   | €290    | €490  |
 | The Challenger | Sea-Doo  | RXT-X 300      | 300 | 3     | 110 km/h  | €140  | €420    | €690  |
-| The Voyager    | Yamaha   | FX SVHO        | 250 | 3     | 107 km/h  | €120  | €360    | €590  |
 | The Acrobat    | Sea-Doo  | Spark Trixx    | 90  | 2     | 80 km/h   | €70   | €210    | €350  |
 
-Alle Modelle: Baujahr 2024.
+Alle Modelle: Baujahr 2024. Je 2 Stück pro Modell.
+
+**Zusatzangebot:** Water Fun (3-Reifen-Tubing hinter Jetski) – €30 pro Person.
 
 ---
 
@@ -83,4 +85,9 @@ Freundlich und direkt – wie wenn David selbst antwortet: entspannt, ehrlich, b
 - `.claude/rules/red-lines.md` – was ich NIEMALS tue
 - `.claude/rules/basics.md` – Grundregeln für die Zusammenarbeit
 - `feedback/tone.md` – Tonfall-Beispiele und Feedback von Kristina
+- `feedback/review-log.md` – Protokoll aller Google-Bewertungen und gesendeten Antworten
 - `src/data/jetskis.ts` – autoritative Jetski-Daten
+- `assets/brand/flyer-2026-description.md` – offizieller Flyer 2026: Slogans, Farben, Kontaktblock
+- `.claude/skills/brand-assets/SKILL.md` – Brand-Skill für ALLE Agenten (Marketing/Design/Copy)
+- `.claude/skills/google-business-profile/SKILL.md` – Google Maps-Eintrag + Bewertungen (mit Templates DE/EN/IT/EL)
+- `.claude/agents/review-responder.md` – Sub-Agent der Google-Bewertungen beantwortet (immer mit Freigabe durch Kristina)
