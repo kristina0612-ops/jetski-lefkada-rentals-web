@@ -3,90 +3,320 @@ import LayoutBare from "../layouts/LayoutBare.astro";
 ---
 
 <LayoutBare
-  title="Privacy Policy · Jetski Lefkada Rentals"
-  description="How Jetski Lefkada Rentals handles your personal data."
+  title="Datenschutz / Privacy / Απόρρητο · Jetski Lefkada Rentals"
+  description="Datenschutzerklärung / Privacy Policy / Πολιτική Απορρήτου – Jetski Lefkada Rentals, Lefkada, Greece."
   themeColor="#fdfbf4"
 >
   <style>
     body { background: #fdfbf4; color: #0a1220; font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif; }
-    .legal-page { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+    .legal-page { max-width: 720px; margin: 0 auto; padding: 6rem 2rem 4rem; }
     h1 { font-family: "Fraunces Variable", Georgia, serif; font-size: 3rem; font-weight: 400; letter-spacing: -0.03em; margin-bottom: 2rem; line-height: 1.1; }
     h1 em { font-style: italic; color: #ff5a36; }
-    h2 { font-family: "Fraunces Variable", Georgia, serif; font-size: 1.4rem; font-weight: 400; margin: 2.5rem 0 0.75rem; }
-    p, ul { font-size: 1rem; line-height: 1.8; color: #2a3a4a; margin-bottom: 1rem; }
-    ul { padding-left: 1.5rem; }
-    li { margin-bottom: 0.5rem; }
+    h2 { font-family: "Fraunces Variable", Georgia, serif; font-size: 1.25rem; font-weight: 400; margin: 2.5rem 0 0.6rem; }
+    p, ul, ol { font-size: 0.95rem; line-height: 1.8; color: #2a3a4a; margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
     a { color: #00b3a7; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7a8d; margin-bottom: 3rem; }
     .back:hover { color: #0a1220; }
     .divider { width: 40px; height: 2px; background: linear-gradient(90deg, #ff5a36, #ffc233); margin: 2rem 0; border-radius: 1px; }
-    .highlight { background: #f0f7f6; border-left: 3px solid #00b3a7; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .highlight { background: #f0f7f6; border-left: 3px solid #00b3a7; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; font-size: 0.9rem; }
+    .law-ref { font-size: 0.8rem; color: #6b7a8d; font-style: italic; }
+
+    /* Language tabs */
+    .lang-tabs { display: flex; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .lang-btn {
+      padding: 0.45rem 1.1rem; border: 1.5px solid #d0ccc4; border-radius: 100px;
+      background: transparent; font-size: 0.82rem; letter-spacing: 0.08em;
+      cursor: pointer; font-family: "Instrument Sans", sans-serif; color: #6b7a8d;
+      transition: all 0.15s ease;
+    }
+    .lang-btn:hover { border-color: #ff5a36; color: #0a1220; }
+    .lang-btn.active { background: #ff5a36; border-color: #ff5a36; color: #fff; font-weight: 600; }
   </style>
 
   <div class="legal-page">
-    <a href="/v2" class="back">
+    <a href="/" class="back">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
       Back to site
     </a>
 
-    <h1>Privacy<br><em>Policy</em></h1>
+    <h1>Datenschutz /<br><em>Privacy</em></h1>
     <div class="divider"></div>
 
-    <div class="highlight">
-      <strong>Short version:</strong> We collect only what we need to process your booking. We don't sell your data. We don't use tracking cookies.
+    <div class="lang-tabs">
+      <button class="lang-btn active" data-lang="de">Deutsch</button>
+      <button class="lang-btn" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="el">Ελληνικά</button>
     </div>
 
-    <h2>Who We Are</h2>
-    <p>
-      Jetski Lefkada Rentals, operated by David Goldberg, Nidri Harbour, Lefkada, Greece.
-      Contact: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
-    </p>
+    <!-- ═══════════════════════════════════════════════════════════ DEUTSCH -->
+    <div class="lang-block" data-lang="de">
 
-    <h2>What Data We Collect</h2>
-    <ul>
-      <li><strong>Booking inquiries:</strong> Name, contact details (WhatsApp/email), preferred date and jetski</li>
-      <li><strong>On-site:</strong> Government-issued ID number (required by Greek maritime law for all operators)</li>
-      <li><strong>Payment:</strong> Processed via Viva Wallet – we do not store card details</li>
-    </ul>
+      <div class="highlight">
+        <strong>Kurzfassung:</strong> Wir speichern nur, was wir für Deine Buchung brauchen. Wir verkaufen keine Daten. Wir nutzen keine Tracking-Cookies.
+      </div>
 
-    <h2>Why We Collect It</h2>
-    <ul>
-      <li>To confirm and manage your booking</li>
-      <li>To comply with Greek Coast Guard regulations (Law 4926/2022)</li>
-      <li>To process payment and issue refunds if applicable</li>
-      <li>To contact you about weather cancellations or changes</li>
-    </ul>
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        <strong>Jetski Lefkada Rentals</strong><br>
+        Inhaber: David Goldberg<br>
+        Nidri Harbour, 311 00 Lefkada, Griechenland<br>
+        WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
+      </p>
 
-    <h2>How Long We Keep It</h2>
-    <p>
-      Booking records are kept for 3 years as required by Greek tax and maritime regulations.
-      After that, all personal data is deleted.
-    </p>
+      <h2>2. Erhobene Daten</h2>
+      <ul>
+        <li><strong>Buchungsanfragen:</strong> Name, Kontaktdaten (WhatsApp/E-Mail), gewünschtes Datum, gebuchtes Modell</li>
+        <li><strong>Vor Ort:</strong> Ausweisnummer (Personalausweis oder Reisepass) – Pflicht gemäß griechischer Seerechtsnorm (Ν. 4926/2022)</li>
+        <li><strong>Zahlung:</strong> Abwicklung über Viva Wallet – wir speichern keine Kartendaten</li>
+      </ul>
 
-    <h2>Who Has Access</h2>
-    <p>
-      Only David and Kristina Goldberg have access to your data. We do not share it with
-      third parties except where required by Greek law (e.g. Coast Guard incident reports).
-    </p>
+      <h2>3. Zweck der Verarbeitung</h2>
+      <ul>
+        <li>Buchungsabwicklung und -bestätigung</li>
+        <li>Erfüllung gesetzlicher Meldepflichten gegenüber der griechischen Küstenwache <span class="law-ref">(Ν. 4926/2022)</span></li>
+        <li>Zahlungsabwicklung und Rückerstattungen</li>
+        <li>Kommunikation bei Wetterausfällen oder Terminänderungen</li>
+      </ul>
 
-    <h2>Your Rights (GDPR)</h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li>Access the data we hold about you</li>
-      <li>Request correction of inaccurate data</li>
-      <li>Request deletion (where not prevented by legal obligations)</li>
-      <li>Object to processing</li>
-    </ul>
-    <p>To exercise these rights, contact us via WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a></p>
+      <h2>4. Rechtsgrundlage</h2>
+      <ul>
+        <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Vertragserfüllung (Buchungsabwicklung)</li>
+        <li><strong>Art. 6 Abs. 1 lit. c DSGVO</strong> – Erfüllung rechtlicher Verpflichtungen (Küstenwache-Meldepflichten)</li>
+        <li><strong>Νόμος 4624/2019</strong> – Griechisches Ausführungsgesetz zur DSGVO</li>
+      </ul>
 
-    <h2>Cookies</h2>
-    <p>
-      This website does not use tracking cookies or analytics scripts.
-      No personal data is collected by simply visiting this site.
-    </p>
+      <h2>5. Speicherdauer</h2>
+      <p>
+        Buchungsunterlagen werden <strong>3 Jahre</strong> aufbewahrt, wie von der griechischen Steuer- und Seerechtsnorm vorgeschrieben. Danach werden alle personenbezogenen Daten gelöscht.
+      </p>
 
-    <div class="divider"></div>
-    <p style="font-size: 0.85rem; color: #6b7a8d;">Last updated: April 2026 · Governing law: Greece / EU GDPR</p>
-  </div>
+      <h2>6. Empfänger der Daten</h2>
+      <p>
+        Nur David und Kristina Goldberg haben Zugang zu Deinen Daten. Wir geben keine Daten an Dritte weiter – außer wenn dies gesetzlich vorgeschrieben ist (z. B. Küstenwache-Meldungen bei Unfällen).
+      </p>
+
+      <h2>7. Datenübermittlung in Drittländer</h2>
+      <p>
+        Es findet keine Übermittlung personenbezogener Daten in Länder außerhalb der EU/des EWR statt.
+      </p>
+
+      <h2>8. Deine Rechte (DSGVO Art. 15–22)</h2>
+      <p>Du hast das Recht auf:</p>
+      <ul>
+        <li><strong>Auskunft</strong> über die von uns gespeicherten Daten (Art. 15)</li>
+        <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16)</li>
+        <li><strong>Löschung</strong>, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen (Art. 17)</li>
+        <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18)</li>
+        <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21)</li>
+        <li><strong>Datenübertragbarkeit</strong> (Art. 20)</li>
+      </ul>
+      <p>
+        Zur Ausübung Deiner Rechte kontaktiere uns via WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
+      </p>
+
+      <h2>9. Cookies</h2>
+      <p>
+        Diese Website verwendet <strong>keine</strong> Tracking-Cookies und keine Analyse-Skripte. Es werden keine personenbezogenen Daten durch den bloßen Seitenbesuch erhoben.
+      </p>
+
+      <h2>10. Aufsichtsbehörde</h2>
+      <p>
+        Du hast das Recht, Beschwerde bei der zuständigen Datenschutzaufsichtsbehörde einzulegen. Da sich der Geschäftssitz in Griechenland befindet, ist die zuständige Behörde:<br>
+        <strong>Hellenic Data Protection Authority (HDPA)</strong><br>
+        Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)<br>
+        Κηφισίας 1–3, 115 23 Αθήνα, Griechenland<br>
+        <a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a>
+      </p>
+
+      <div class="divider"></div>
+      <p style="font-size: 0.82rem; color: #6b7a8d;">Stand: April 2026 · Rechtsgrundlage: DSGVO (EU 2016/679) · Νόμος 4624/2019</p>
+
+    </div><!-- /de -->
+
+    <!-- ═══════════════════════════════════════════════════════════ ENGLISH -->
+    <div class="lang-block" data-lang="en" style="display:none">
+
+      <div class="highlight">
+        <strong>Short version:</strong> We collect only what we need to process your booking. We don't sell your data. We don't use tracking cookies.
+      </div>
+
+      <h2>1. Data Controller</h2>
+      <p>
+        <strong>Jetski Lefkada Rentals</strong><br>
+        Owner: David Goldberg<br>
+        Nidri Harbour, 311 00 Lefkada, Greece<br>
+        WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
+      </p>
+
+      <h2>2. Data We Collect</h2>
+      <ul>
+        <li><strong>Booking inquiries:</strong> Name, contact details (WhatsApp/email), preferred date, booked model</li>
+        <li><strong>On site:</strong> Government-issued ID number (passport or national ID) – required by Greek maritime law <span class="law-ref">(Law 4926/2022)</span></li>
+        <li><strong>Payment:</strong> Processed via Viva Wallet – we do not store card details</li>
+      </ul>
+
+      <h2>3. Purpose of Processing</h2>
+      <ul>
+        <li>Booking management and confirmation</li>
+        <li>Compliance with mandatory Greek Coast Guard reporting requirements <span class="law-ref">(Law 4926/2022)</span></li>
+        <li>Payment processing and refunds</li>
+        <li>Communication regarding weather cancellations or schedule changes</li>
+      </ul>
+
+      <h2>4. Legal Basis</h2>
+      <ul>
+        <li><strong>Art. 6(1)(b) GDPR</strong> – Performance of a contract (booking management)</li>
+        <li><strong>Art. 6(1)(c) GDPR</strong> – Compliance with a legal obligation (Coast Guard reporting)</li>
+        <li><strong>Law 4624/2019</strong> – Greek implementing law for the GDPR</li>
+      </ul>
+
+      <h2>5. Retention Period</h2>
+      <p>
+        Booking records are retained for <strong>3 years</strong> as required by Greek tax and maritime regulations. After this period, all personal data is deleted.
+      </p>
+
+      <h2>6. Recipients</h2>
+      <p>
+        Only David and Kristina Goldberg have access to your data. We do not share it with third parties except where required by law (e.g. Coast Guard incident reports).
+      </p>
+
+      <h2>7. International Data Transfers</h2>
+      <p>
+        No personal data is transferred to countries outside the EU/EEA.
+      </p>
+
+      <h2>8. Your Rights (GDPR Art. 15–22)</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the data we hold about you (Art. 15)</li>
+        <li><strong>Rectification</strong> of inaccurate data (Art. 16)</li>
+        <li><strong>Erasure</strong>, where not prevented by legal obligations (Art. 17)</li>
+        <li><strong>Restriction</strong> of processing (Art. 18)</li>
+        <li><strong>Object</strong> to processing (Art. 21)</li>
+        <li><strong>Data portability</strong> (Art. 20)</li>
+      </ul>
+      <p>
+        To exercise your rights, contact us via WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
+      </p>
+
+      <h2>9. Cookies</h2>
+      <p>
+        This website does <strong>not</strong> use tracking cookies or analytics scripts. No personal data is collected by simply visiting this site.
+      </p>
+
+      <h2>10. Supervisory Authority</h2>
+      <p>
+        You have the right to lodge a complaint with the competent data protection supervisory authority. As our place of business is in Greece, the competent authority is:<br>
+        <strong>Hellenic Data Protection Authority (HDPA)</strong><br>
+        Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)<br>
+        Kifisias 1–3, 115 23 Athens, Greece<br>
+        <a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a>
+      </p>
+
+      <div class="divider"></div>
+      <p style="font-size: 0.82rem; color: #6b7a8d;">Last updated: April 2026 · Governing law: Greece / EU GDPR (2016/679) · Law 4624/2019</p>
+
+    </div><!-- /en -->
+
+    <!-- ═══════════════════════════════════════════════════════════ ΕΛΛΗΝΙΚΑ -->
+    <div class="lang-block" data-lang="el" style="display:none">
+
+      <div class="highlight">
+        <strong>Σύντομη έκδοση:</strong> Συλλέγουμε μόνο ό,τι χρειαζόμαστε για την κράτησή σας. Δεν πωλούμε δεδομένα. Δεν χρησιμοποιούμε cookies παρακολούθησης.
+      </div>
+
+      <h2>1. Υπεύθυνος Επεξεργασίας</h2>
+      <p>
+        <strong>Jetski Lefkada Rentals</strong><br>
+        Ιδιοκτήτης: David Goldberg<br>
+        Λιμάνι Νυδρίου, 311 00 Λευκάδα, Ελλάδα<br>
+        WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
+      </p>
+
+      <h2>2. Δεδομένα που Συλλέγουμε</h2>
+      <ul>
+        <li><strong>Αιτήματα κράτησης:</strong> Ονοματεπώνυμο, στοιχεία επικοινωνίας (WhatsApp/email), επιθυμητή ημερομηνία, επιλεγμένο μοντέλο</li>
+        <li><strong>Επιτόπου:</strong> Αριθμός δελτίου ταυτότητας ή διαβατηρίου – υποχρεωτικό βάσει ελληνικής ναυτιλιακής νομοθεσίας <span class="law-ref">(Ν. 4926/2022)</span></li>
+        <li><strong>Πληρωμή:</strong> Μέσω Viva Wallet – δεν αποθηκεύουμε στοιχεία κάρτας</li>
+      </ul>
+
+      <h2>3. Σκοπός Επεξεργασίας</h2>
+      <ul>
+        <li>Διαχείριση και επιβεβαίωση κράτησης</li>
+        <li>Συμμόρφωση με υποχρεωτικές αναφορές στο Λιμενικό Σώμα <span class="law-ref">(Ν. 4926/2022)</span></li>
+        <li>Επεξεργασία πληρωμών και επιστροφές χρημάτων</li>
+        <li>Επικοινωνία σχετικά με ακυρώσεις λόγω καιρού ή αλλαγές προγράμματος</li>
+      </ul>
+
+      <h2>4. Νομική Βάση Επεξεργασίας</h2>
+      <ul>
+        <li><strong>Άρθρο 6 παρ. 1 στ. β΄ ΓΚΠΔ</strong> – Εκτέλεση σύμβασης (διαχείριση κράτησης)</li>
+        <li><strong>Άρθρο 6 παρ. 1 στ. γ΄ ΓΚΠΔ</strong> – Έννομη υποχρέωση (αναφορές Λιμενικού)</li>
+        <li><strong>Νόμος 4624/2019</strong> – Ελληνικός νόμος εφαρμογής ΓΚΠΔ</li>
+      </ul>
+
+      <h2>5. Διάρκεια Αποθήκευσης</h2>
+      <p>
+        Τα έγγραφα κράτησης φυλάσσονται για <strong>3 χρόνια</strong>, όπως απαιτείται από την ελληνική φορολογική νομοθεσία και τους ναυτιλιακούς κανονισμούς. Μετά το πέρας αυτής της περιόδου, όλα τα προσωπικά δεδομένα διαγράφονται.
+      </p>
+
+      <h2>6. Αποδέκτες Δεδομένων</h2>
+      <p>
+        Μόνο ο David Goldberg και η Kristina Goldberg έχουν πρόσβαση στα δεδομένα σας. Δεν κοινοποιούμε δεδομένα σε τρίτους, εκτός αν απαιτείται από τον νόμο (π.χ. αναφορά στο Λιμεναρχείο σε περίπτωση ατυχήματος).
+      </p>
+
+      <h2>7. Διαβίβαση σε Τρίτες Χώρες</h2>
+      <p>
+        Δεν πραγματοποιείται καμία διαβίβαση προσωπικών δεδομένων εκτός ΕΕ/ΕΟΧ.
+      </p>
+
+      <h2>8. Τα Δικαιώματά σας (ΓΚΠΔ Άρθρα 15–22)</h2>
+      <p>Έχετε δικαίωμα:</p>
+      <ul>
+        <li><strong>Πρόσβασης</strong> στα δεδομένα που διατηρούμε (Άρθρο 15)</li>
+        <li><strong>Διόρθωσης</strong> ανακριβών δεδομένων (Άρθρο 16)</li>
+        <li><strong>Διαγραφής</strong>, εφόσον δεν απαγορεύεται από νομική υποχρέωση (Άρθρο 17)</li>
+        <li><strong>Περιορισμού</strong> της επεξεργασίας (Άρθρο 18)</li>
+        <li><strong>Εναντίωσης</strong> στην επεξεργασία (Άρθρο 21)</li>
+        <li><strong>Φορητότητας</strong> δεδομένων (Άρθρο 20)</li>
+      </ul>
+      <p>
+        Για την άσκηση των δικαιωμάτων σας, επικοινωνήστε μαζί μας μέσω WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a>
+      </p>
+
+      <h2>9. Cookies</h2>
+      <p>
+        Ο ιστότοπος <strong>δεν</strong> χρησιμοποιεί cookies παρακολούθησης ή scripts αναλυτικών. Δεν συλλέγονται προσωπικά δεδομένα μόνο από την επίσκεψη στον ιστότοπο.
+      </p>
+
+      <h2>10. Εποπτική Αρχή</h2>
+      <p>
+        Έχετε δικαίωμα υποβολής καταγγελίας στην αρμόδια εποπτική αρχή προστασίας δεδομένων:<br>
+        <strong>Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)</strong><br>
+        Κηφισίας 1–3, 115 23 Αθήνα<br>
+        <a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a>
+      </p>
+
+      <div class="divider"></div>
+      <p style="font-size: 0.82rem; color: #6b7a8d;">Τελευταία ενημέρωση: Απρίλιος 2026 · ΓΚΠΔ (ΕΕ 2016/679) · Ν. 4624/2019</p>
+
+    </div><!-- /el -->
+
+  </div><!-- /legal-page -->
+
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+          (block as HTMLElement).style.display = block.getAttribute('data-lang') === lang ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
 </LayoutBare>

@@ -3,105 +3,587 @@ import LayoutBare from "../layouts/LayoutBare.astro";
 ---
 
 <LayoutBare
-  title="Terms & Conditions · Jetski Lefkada Rentals"
-  description="Booking terms, cancellation policy and rental conditions for Jetski Lefkada Rentals."
+  title="AGB / Terms & Conditions · Jetski Lefkada Rentals"
+  description="Allgemeine Geschäftsbedingungen / Terms and Conditions for Jetski Lefkada Rentals, Lefkada, Greece."
   themeColor="#fdfbf4"
 >
   <style>
     body { background: #fdfbf4; color: #0a1220; font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif; }
-    .legal-page { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+    .legal-page { max-width: 720px; margin: 0 auto; padding: 6rem 2rem 4rem; }
     h1 { font-family: "Fraunces Variable", Georgia, serif; font-size: 3rem; font-weight: 400; letter-spacing: -0.03em; margin-bottom: 2rem; line-height: 1.1; }
     h1 em { font-style: italic; color: #ff5a36; }
-    h2 { font-family: "Fraunces Variable", Georgia, serif; font-size: 1.4rem; font-weight: 400; margin: 2.5rem 0 0.75rem; }
-    p, ul, table { font-size: 1rem; line-height: 1.8; color: #2a3a4a; margin-bottom: 1rem; }
-    ul { padding-left: 1.5rem; }
-    li { margin-bottom: 0.5rem; }
+    h2 { font-family: "Fraunces Variable", Georgia, serif; font-size: 1.25rem; font-weight: 400; margin: 2.5rem 0 0.6rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.4rem; color: #0a1220; }
+    p, ul, ol, table { font-size: 0.95rem; line-height: 1.8; color: #2a3a4a; margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
     a { color: #00b3a7; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7a8d; margin-bottom: 3rem; }
     .back:hover { color: #0a1220; }
     .divider { width: 40px; height: 2px; background: linear-gradient(90deg, #ff5a36, #ffc233); margin: 2rem 0; border-radius: 1px; }
-    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    th { text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid #0a1220; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
-    td { padding: 0.75rem 1rem; border-bottom: 1px solid #e8e4da; }
-    .warn { background: #fff0ec; border-left: 3px solid #ff5a36; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; }
+    th { text-align: left; padding: 0.65rem 1rem; border-bottom: 2px solid #0a1220; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid #e8e4da; font-size: 0.9rem; }
+    .warn { background: #fff0ec; border-left: 3px solid #ff5a36; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; font-size: 0.9rem; }
+    .info { background: #f0f7f6; border-left: 3px solid #00b3a7; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; font-size: 0.9rem; }
+    .law-ref { font-size: 0.8rem; color: #6b7a8d; font-style: italic; }
+
+    /* Language tabs */
+    .lang-tabs { display: flex; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .lang-btn {
+      padding: 0.45rem 1.1rem; border: 1.5px solid #d0ccc4; border-radius: 100px;
+      background: transparent; font-size: 0.82rem; letter-spacing: 0.08em;
+      cursor: pointer; font-family: "Instrument Sans", sans-serif; color: #6b7a8d;
+      transition: all 0.15s ease;
+    }
+    .lang-btn:hover { border-color: #ff5a36; color: #0a1220; }
+    .lang-btn.active { background: #ff5a36; border-color: #ff5a36; color: #fff; font-weight: 600; }
   </style>
 
   <div class="legal-page">
-    <a href="/v2" class="back">
+    <a href="/" class="back">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
       Back to site
     </a>
 
-    <h1>Terms &<br><em>Conditions</em></h1>
+    <h1>AGB /<br><em>Terms & Conditions</em></h1>
     <div class="divider"></div>
 
-    <h2>1. Booking & Payment</h2>
-    <ul>
-      <li>Bookings are confirmed upon receipt of 30% deposit</li>
-      <li>Remaining balance due on the day of rental</li>
-      <li>Accepted: Viva Wallet, cash (EUR), card</li>
-      <li>Minimum age: 18 years with valid photo ID</li>
-      <li>No boating licence required</li>
-    </ul>
-
-    <h2>2. Cancellation Policy</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Notice given</th>
-          <th>Refund</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>More than 48 hours before</td><td>100% – full refund</td></tr>
-        <tr><td>24–48 hours before</td><td>50% refund</td></tr>
-        <tr><td>Less than 24 hours</td><td>No refund</td></tr>
-        <tr><td>Weather cancellation (Beaufort 5+)</td><td>100% refund or free rebooking</td></tr>
-      </tbody>
-    </table>
-
-    <h2>3. Weather Policy</h2>
-    <p>
-      We monitor wind conditions every morning. If wind exceeds Beaufort 5, all operations
-      are suspended as required by Greek Coast Guard regulations. You will be notified
-      as early as possible and offered a full refund or free rebooking.
-    </p>
-
-    <h2>4. Safety Rules</h2>
-    <ul>
-      <li>All operators must complete a 10-minute safety briefing before departure</li>
-      <li>Life vest must be worn at all times</li>
-      <li>Maximum distance from shore: 700 metres (Greek Coast Guard regulation)</li>
-      <li>No entry into marked swimming zones (buoy areas)</li>
-      <li>Operating under the influence of alcohol or drugs is strictly prohibited and results in immediate termination without refund</li>
-    </ul>
-
-    <h2>5. Liability & Damage</h2>
-    <p>
-      Third-party liability is covered up to €700,000 per incident (Greek Law 4926/2022).
-      Operators are personally liable for damage caused by reckless or prohibited behaviour.
-      In case of damage, a written incident report will be completed on site.
-    </p>
-
-    <div class="warn">
-      <strong>Important:</strong> Personal accident insurance for riders is not included.
-      We strongly recommend travel insurance that covers water sports activities.
+    <div class="lang-tabs">
+      <button class="lang-btn active" data-lang="de">Deutsch</button>
+      <button class="lang-btn" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="el">Ελληνικά</button>
     </div>
 
-    <h2>6. Force Majeure</h2>
-    <p>
-      Jetski Lefkada Rentals is not liable for cancellations or delays caused by
-      extreme weather, acts of God, or orders from Greek maritime authorities.
-    </p>
+    <!-- ═══════════════════════════════════════════════════════════ DEUTSCH -->
+    <div class="lang-block" data-lang="de">
 
-    <h2>7. Governing Law</h2>
-    <p>
-      These terms are governed by Greek law. Any disputes shall be subject to the
-      exclusive jurisdiction of the courts of Lefkada, Greece.
-    </p>
+      <h2>§ 1 Vertragsparteien</h2>
+      <p>
+        Dieser Mietvertrag wird geschlossen zwischen:<br>
+        <strong>Vermieter:</strong> David Goldberg, handelnd unter „Jetski Lefkada Rentals", Nidri Harbour, 311 00 Lefkada, Griechenland, WhatsApp: +30 695 561 2777<br>
+        <strong>Mieter:</strong> Die Person, die eine Buchung vornimmt und das Safety-Briefing unterzeichnet.
+      </p>
 
-    <div class="divider"></div>
-    <p style="font-size: 0.85rem; color: #6b7a8d;">Last updated: April 2026</p>
-  </div>
+      <h2>§ 2 Vertragsgegenstand</h2>
+      <p>
+        Der Vermieter überlässt dem Mieter zeitlich begrenzt ein Wasserfahrzeug (Personal Watercraft / Jetski) zur Freizeitnutzung auf dem Ionischen Meer vor Lefkada. Die Überlassung erfolgt zu den nachfolgenden Bedingungen und in Übereinstimmung mit dem griechischen Gesetz 4926/2022 sowie dem Präsidialdekret 23/2000.
+      </p>
+
+      <h2>§ 3 Buchung & Zahlung</h2>
+      <ul>
+        <li>Buchungen werden durch Zahlung einer <strong>Anzahlung von 30 %</strong> des Gesamtpreises verbindlich.</li>
+        <li>Der Restbetrag ist am Tag der Anmietung vor Fahrtantritt zu entrichten.</li>
+        <li>Akzeptierte Zahlungsmittel: Viva Wallet, Barzahlung (EUR), Kredit-/Debitkarte.</li>
+        <li><strong>Mindestalter:</strong> 18 Jahre. Gültiger Lichtbildausweis ist vor Ort vorzulegen.</li>
+        <li>Ein Bootsführerschein ist nicht erforderlich.</li>
+        <li>Treffpunkt: Nidri Dock, Lefkada. GPS-Koordinaten werden mit der Buchungsbestätigung übermittelt.</li>
+        <li>Öffnungszeiten: 10:00–13:00 und 16:00–19:00 Uhr, Mai bis September.</li>
+      </ul>
+
+      <h2>§ 4 Stornierungsbedingungen</h2>
+      <table>
+        <thead><tr><th>Stornierungszeitpunkt</th><th>Rückerstattung</th></tr></thead>
+        <tbody>
+          <tr><td>Mehr als 48 Stunden vor Fahrtantritt</td><td>100 % – volle Rückerstattung</td></tr>
+          <tr><td>24 bis 48 Stunden vor Fahrtantritt</td><td>50 % Rückerstattung</td></tr>
+          <tr><td>Weniger als 24 Stunden</td><td>Keine Rückerstattung</td></tr>
+          <tr><td>Wetterbedingte Absage durch Vermieter (Beaufort 5+)</td><td>100 % oder kostenlose Umbuchung</td></tr>
+        </tbody>
+      </table>
+
+      <h2>§ 5 Wetter & Betriebsunterbrechung</h2>
+      <p>
+        Gemäß den Vorschriften der griechischen Küstenwache (Π.Δ. 23/2000) wird der Betrieb bei Windstärken ab Beaufort 5 oder bei aus Sicherheitsgründen ungeeigneten Wetterbedingungen eingestellt. Die Entscheidung trifft der Vermieter nach pflichtgemäßem Ermessen. Kunden werden umgehend per WhatsApp informiert. Bei wetterbedingter Absage durch den Vermieter besteht Anspruch auf vollständige Rückerstattung oder kostenlose Umbuchung.
+      </p>
+
+      <h2>§ 6 Sicherheitsvorschriften</h2>
+      <p>Folgende Sicherheitsregeln sind verbindlich und beruhen auf griechischem Recht:</p>
+      <ul>
+        <li><strong>Safety-Briefing:</strong> Jeder Fahrer muss vor Fahrtantritt ein obligatorisches 10-minütiges Sicherheitsbriefing absolvieren und durch Unterschrift bestätigen. <span class="law-ref">(Ν. 4926/2022)</span></li>
+        <li><strong>Schwimmweste:</strong> Das Tragen einer Schwimmweste ist für alle Fahrer und Mitfahrer jederzeit Pflicht. Die Weste wird vom Vermieter gestellt.</li>
+        <li><strong>Maximale Küstenentfernung:</strong> 700 Meter. <span class="law-ref">(Π.Δ. 23/2000)</span></li>
+        <li><strong>Schwimmzonen:</strong> Das Einfahren in durch Bojen gekennzeichnete Schwimmzonen ist strikt verboten. <span class="law-ref">(Π.Δ. 23/2000)</span></li>
+        <li><strong>Alkohol- und Drogenverbot:</strong> Das Führen eines Wasserfahrzeugs unter Einfluss von Alkohol oder Drogen ist nach griechischem Recht verboten und führt zur sofortigen Beendigung ohne Rückerstattung.</li>
+        <li><strong>Fahrerautorisierung:</strong> Nur die Person, die das Briefing unterzeichnet hat, darf das Fahrzeug steuern.</li>
+        <li><strong>Mitfahrerkapazität:</strong> Maximal 1 Mitfahrer auf 2-Sitzer-Modellen; maximal 2 Mitfahrer auf 3-Sitzer-Modellen.</li>
+      </ul>
+
+      <h2>§ 7 Pflichten des Mieters</h2>
+      <p>Der Mieter verpflichtet sich:</p>
+      <ul>
+        <li>Das Fahrzeug mit der Sorgfalt eines ordentlichen Mieters zu behandeln.</li>
+        <li>Das Fahrzeug im ordnungsgemäßen Zustand zurückzugeben.</li>
+        <li>Schäden unverzüglich vollständig zu melden.</li>
+        <li>Alle Vorschriften der griechischen Küstenwache und des Hafenkapitäns von Lefkada einzuhalten.</li>
+        <li>Das Fahrzeug nicht an Dritte zu überlassen.</li>
+        <li>Keine Gegenstände oder Substanzen mitzuführen, die gegen griechisches Recht verstoßen.</li>
+      </ul>
+
+      <h2>§ 8 Verbotene Verhaltensweisen</h2>
+      <p>Ausdrücklich untersagt sind:</p>
+      <ul>
+        <li>Stunts, Überschläge oder gefährliche Manöver jeglicher Art</li>
+        <li>Überschreitung der 700-Meter-Küstengrenze</li>
+        <li>Einfahrt in Hafen- oder Schifffahrtsbereiche außer dem zugewiesenen Dock</li>
+        <li>Annäherung an andere Wasserfahrzeuge auf weniger als 50 Meter</li>
+        <li>Einfahrt in Badezonen oder Nähe von Schwimmern</li>
+        <li>Alkohol- oder Drogenkonsum während der Mietzeit</li>
+        <li>Mitnahme von mehr Personen als die Sitzkapazität erlaubt</li>
+        <li>Absichtliche oder grob fahrlässige Beschädigung des Fahrzeugs</li>
+        <li>Übertragung des Fahrzeugs an nicht autorisierte Fahrer</li>
+      </ul>
+
+      <h2>§ 9 Haftung & Versicherung</h2>
+
+      <h3>9.1 Haftpflichtversicherung</h3>
+      <p>
+        Das Fahrzeug ist mit einer Pflicht-Haftpflichtversicherung für Drittschäden bis zu <strong>€ 700.000 pro Schadensereignis</strong> versichert. <span class="law-ref">(Ν. 4926/2022, Π.Δ. 284/1994)</span>
+      </p>
+
+      <h3>9.2 Keine Unfallversicherung für Fahrer/Mitfahrer</h3>
+      <div class="warn">
+        <strong>Wichtiger Hinweis:</strong> Die Versicherung des Fahrzeugs deckt <strong>keine</strong> Personenschäden des Fahrers oder der Mitfahrer ab. Wir empfehlen ausdrücklich den Abschluss einer Reise- oder Sportversicherung, die Wassersportaktivitäten einschließt.
+      </div>
+
+      <h3>9.3 Kaution</h3>
+      <p>
+        Es kann eine Schadensfreiheitskaution verlangt werden. Die Höhe richtet sich nach dem gebuchten Modell und wird im Buchungsvorgang mitgeteilt. Die Kaution wird vollständig zurückerstattet, sofern das Fahrzeug unbeschädigt zurückgegeben wird.
+      </p>
+
+      <h3>9.4 Haftung des Mieters für Fahrzeugschäden</h3>
+      <p>
+        Schäden am Fahrzeug, die durch grob fahrlässiges oder vorsätzliches Verhalten des Mieters verursacht werden, gehen vollständig zu Lasten des Mieters. Schäden durch normalen Betrieb oder unverschuldete Ereignisse sind ausgeschlossen.
+      </p>
+
+      <h2>§ 10 Haftungsausschluss</h2>
+
+      <h3>10.1 Ausschluss der Vermieterhaftung</h3>
+      <p>
+        Der Vermieter haftet nicht für Personen-, Sach- oder Vermögensschäden des Mieters, der Mitfahrer oder Dritter, die entstehen durch:
+      </p>
+      <ul>
+        <li>Nichteinhaltung dieser AGB oder der Sicherheitsvorschriften</li>
+        <li>Grob fahrlässiges oder vorsätzliches Verhalten des Mieters</li>
+        <li>Verstöße gegen gesetzliche Vorschriften durch den Mieter</li>
+        <li>Einwirkungen höherer Gewalt</li>
+      </ul>
+
+      <h3>10.2 Eigenverantwortung des Mieters</h3>
+      <p>
+        Der Mieter übernimmt durch Unterzeichnung des Safety-Briefings die volle Verantwortung für die Bedienung des Fahrzeugs und die Einhaltung aller geltenden Vorschriften. Das Fahren eines Jetskis birgt inhärente Risiken; der Mieter erklärt durch seine Unterschrift, diese Risiken zu kennen und zu akzeptieren.
+      </p>
+
+      <h3>10.3 Freistellungsverpflichtung (Indemnifikation)</h3>
+      <p>
+        Der Mieter stellt den Vermieter, dessen Mitarbeiter und Beauftragten von sämtlichen Ansprüchen Dritter frei, die aus einem vertragswidrigen, grob fahrlässigen oder vorsätzlichen Verhalten des Mieters oder der Mitfahrer entstehen.
+      </p>
+
+      <h3>10.4 Haftungsbeschränkung</h3>
+      <p>
+        Die Haftung des Vermieters gegenüber dem Mieter ist auf die gesetzlich vorgeschriebene Haftpflichtversicherungssumme von € 700.000 pro Schadensereignis beschränkt. Weitergehende Schadensersatzansprüche sind ausgeschlossen, soweit dies nach griechischem Recht zulässig ist.
+      </p>
+
+      <div class="warn">
+        <strong>Haftungsausschluss – Zusammenfassung:</strong> Jetski Lefkada Rentals haftet nicht für Personen- oder Sachschäden, die aus Regelverstößen, Fahrlässigkeit oder verbotenem Verhalten des Mieters entstehen. Der Mieter fährt auf eigenes Risiko und ist selbst verantwortlich für ausreichenden persönlichen Versicherungsschutz.
+      </div>
+
+      <h2>§ 11 Schadensfall & Protokoll</h2>
+      <p>Bei einem Schadensfall ist wie folgt vorzugehen:</p>
+      <ol>
+        <li>Fahrzeug sichern und sofort den Vermieter kontaktieren: <strong>+30 695 561 2777</strong></li>
+        <li>Bei Unfallbeteiligung: keine Weiterfahrt – auf Anweisungen der Behörden warten</li>
+        <li>Fotos des Schadens, der Umgebung und aller beteiligten Fahrzeuge anfertigen</li>
+        <li>Gemeinsam mit dem Vermieter ein schriftliches Schadensprotokoll erstellen</li>
+        <li>Bei Verletzungen: sofort <strong>Notruf 112</strong> alarmieren</li>
+        <li>Küstenwache: <strong>108</strong></li>
+      </ol>
+
+      <h2>§ 12 Vorzeitige Beendigung</h2>
+      <p>
+        Der Vermieter ist berechtigt, das Mietverhältnis ohne Vorankündigung und ohne Rückerstattung sofort zu beenden, wenn der Mieter gegen Sicherheitsvorschriften verstößt, Alkohol- oder Drogenkonsum festgestellt wird, das Fahrzeug unsachgemäß behandelt wird oder behördliche Anweisungen eine sofortige Rückkehr erfordern.
+      </p>
+
+      <h2>§ 13 Höhere Gewalt</h2>
+      <p>
+        Jetski Lefkada Rentals ist nicht verantwortlich für Leistungsausfälle durch extreme Wetterbedingungen, Naturkatastrophen, staatliche Maßnahmen, Anordnungen der griechischen Küstenwache oder andere unvorhersehbare Ereignisse außerhalb des Einflussbereichs des Vermieters. In solchen Fällen wird die Anzahlung vollständig zurückerstattet oder eine kostenlose Umbuchung angeboten.
+      </p>
+
+      <h2>§ 14 Datenschutz</h2>
+      <p>
+        Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung, der DSGVO (EU 2016/679) und dem griechischen Datenschutzgesetz (Ν. 4624/2019). Vollständige Datenschutzerklärung: <a href="/privacy">/privacy</a>
+      </p>
+
+      <h2>§ 15 Änderungen der AGB</h2>
+      <p>
+        Jetski Lefkada Rentals behält sich das Recht vor, diese AGB jederzeit zu ändern. Die jeweils aktuelle Version ist auf der Website abrufbar. Für bereits bestätigte Buchungen gelten die AGB zum Buchungszeitpunkt.
+      </p>
+
+      <h2>§ 16 Anwendbares Recht & Gerichtsstand</h2>
+      <p>
+        Diese AGB unterliegen ausschließlich dem griechischen Recht. Für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist das Gericht von Lefkada, Griechenland, ausschließlich zuständig. Anwendbare Gesetze: Νόμος 4926/2022, Π.Δ. 23/2000, Ελληνικός Αστικός Κώδικας, Νόμος 2251/1994 (Verbraucherschutz).
+      </p>
+
+      <div class="divider"></div>
+      <p style="font-size: 0.82rem; color: #6b7a8d;">Stand: April 2026 · Jetski Lefkada Rentals · David Goldberg, Nidri, Lefkada, Griechenland</p>
+
+    </div><!-- /de -->
+
+    <!-- ═══════════════════════════════════════════════════════════ ENGLISH -->
+    <div class="lang-block" data-lang="en" style="display:none">
+
+      <h2>§ 1 Contracting Parties</h2>
+      <p>
+        This rental agreement is concluded between:<br>
+        <strong>Operator:</strong> David Goldberg, trading as "Jetski Lefkada Rentals", Nidri Harbour, 311 00 Lefkada, Greece, WhatsApp: +30 695 561 2777<br>
+        <strong>Renter:</strong> The person making a booking and signing the safety briefing form.
+      </p>
+
+      <h2>§ 2 Subject Matter</h2>
+      <p>
+        The operator provides the renter with a personal watercraft (jetski) for recreational use on the Ionian Sea off Lefkada for a limited time period. The rental is subject to the following conditions and in compliance with Greek Law 4926/2022 and Presidential Decree 23/2000.
+      </p>
+
+      <h2>§ 3 Booking & Payment</h2>
+      <ul>
+        <li>Bookings are confirmed upon payment of a <strong>30% deposit</strong> of the total price.</li>
+        <li>The remaining balance is due on the day of rental before departure.</li>
+        <li>Accepted payment methods: Viva Wallet, cash (EUR), credit/debit card.</li>
+        <li><strong>Minimum age:</strong> 18 years. Valid photo ID must be presented on site.</li>
+        <li>No boating licence is required.</li>
+        <li>Meeting point: Nidri Dock, Lefkada. GPS coordinates are provided with booking confirmation.</li>
+        <li>Operating hours: 10:00–13:00 and 16:00–19:00, May to September.</li>
+      </ul>
+
+      <h2>§ 4 Cancellation Policy</h2>
+      <table>
+        <thead><tr><th>Notice given</th><th>Refund</th></tr></thead>
+        <tbody>
+          <tr><td>More than 48 hours before departure</td><td>100% – full refund</td></tr>
+          <tr><td>24 to 48 hours before departure</td><td>50% refund</td></tr>
+          <tr><td>Less than 24 hours</td><td>No refund</td></tr>
+          <tr><td>Weather cancellation by operator (Beaufort 5+)</td><td>100% refund or free rebooking</td></tr>
+        </tbody>
+      </table>
+
+      <h2>§ 5 Weather & Operational Suspension</h2>
+      <p>
+        In accordance with Greek Coast Guard regulations (P.D. 23/2000), operations are suspended when wind speeds reach Beaufort 5 or when weather conditions are otherwise deemed unsafe. The decision is made at the operator's discretion. Customers are notified immediately via WhatsApp. In the event of a weather cancellation by the operator, the renter is entitled to a full refund or free rebooking.
+      </p>
+
+      <h2>§ 6 Safety Rules</h2>
+      <p>The following safety rules are mandatory and based on Greek law:</p>
+      <ul>
+        <li><strong>Safety briefing:</strong> All operators must complete a mandatory 10-minute safety briefing and confirm with a signature before departure. <span class="law-ref">(Law 4926/2022)</span></li>
+        <li><strong>Life vest:</strong> Wearing a life vest is mandatory for all operators and passengers at all times. Vests are provided.</li>
+        <li><strong>Maximum distance from shore:</strong> 700 metres. <span class="law-ref">(P.D. 23/2000)</span></li>
+        <li><strong>Swimming zones:</strong> Entry into buoy-marked swimming zones is strictly prohibited. <span class="law-ref">(P.D. 23/2000)</span></li>
+        <li><strong>Zero alcohol/drugs:</strong> Operating under the influence of alcohol or drugs is prohibited by Greek law and results in immediate termination without refund.</li>
+        <li><strong>Authorised operator only:</strong> Only the person who signed the briefing may operate the watercraft.</li>
+        <li><strong>Passenger capacity:</strong> Maximum 1 passenger on 2-seat models; maximum 2 passengers on 3-seat models.</li>
+      </ul>
+
+      <h2>§ 7 Renter's Obligations</h2>
+      <p>The renter agrees to:</p>
+      <ul>
+        <li>Treat the watercraft with the care of a responsible renter.</li>
+        <li>Return the watercraft in its original condition.</li>
+        <li>Report any damage immediately and in full.</li>
+        <li>Comply with all applicable Greek Coast Guard and Lefkada Harbour Master regulations.</li>
+        <li>Not transfer the watercraft to any third party.</li>
+        <li>Not carry any items or substances prohibited under Greek law.</li>
+      </ul>
+
+      <h2>§ 8 Prohibited Conduct</h2>
+      <p>The following are expressly prohibited:</p>
+      <ul>
+        <li>Stunts, flips or dangerous manoeuvres of any kind</li>
+        <li>Exceeding the 700-metre coastal limit</li>
+        <li>Entering harbour or shipping lanes other than the designated dock</li>
+        <li>Approaching other vessels within 50 metres</li>
+        <li>Entering swimming zones or approaching swimmers</li>
+        <li>Consuming alcohol or drugs during the rental period</li>
+        <li>Carrying more passengers than the seating capacity allows</li>
+        <li>Intentional or grossly negligent damage to the watercraft</li>
+        <li>Transferring the watercraft to an unauthorised operator</li>
+      </ul>
+
+      <h2>§ 9 Liability & Insurance</h2>
+
+      <h3>9.1 Third-Party Liability Insurance</h3>
+      <p>
+        The watercraft is covered by mandatory third-party liability insurance of up to <strong>€700,000 per incident</strong>. <span class="law-ref">(Law 4926/2022, P.D. 284/1994)</span>
+      </p>
+
+      <h3>9.2 No Personal Accident Insurance for Operator / Passengers</h3>
+      <div class="warn">
+        <strong>Important:</strong> The watercraft's insurance does <strong>not</strong> cover personal injury to the operator or passengers. We strongly recommend taking out travel or sports insurance that includes water sports activities.
+      </div>
+
+      <h3>9.3 Security Deposit</h3>
+      <p>
+        A damage-free deposit may be required. The amount depends on the booked model and will be communicated during the booking process. The deposit is fully refunded provided the watercraft is returned undamaged.
+      </p>
+
+      <h3>9.4 Renter's Liability for Damage to Watercraft</h3>
+      <p>
+        Damage to the watercraft caused by the renter's gross negligence or intentional conduct is fully the renter's responsibility. Damage resulting from normal operation or unforeseeable events is excluded.
+      </p>
+
+      <h2>§ 10 Disclaimer of Liability</h2>
+
+      <h3>10.1 Exclusion of Operator's Liability</h3>
+      <p>The operator is not liable for personal injury, property damage or financial loss suffered by the renter, passengers or third parties arising from:</p>
+      <ul>
+        <li>Non-compliance with these Terms or safety rules</li>
+        <li>Gross negligence or intentional misconduct by the renter</li>
+        <li>Violation of applicable laws by the renter</li>
+        <li>Force majeure events</li>
+      </ul>
+
+      <h3>10.2 Renter's Personal Responsibility</h3>
+      <p>
+        By signing the safety briefing, the renter assumes full responsibility for operating the watercraft and complying with all applicable regulations. Riding a jetski involves inherent risks; by signing, the renter acknowledges knowing and accepting these risks.
+      </p>
+
+      <h3>10.3 Indemnification</h3>
+      <p>
+        The renter shall indemnify and hold harmless the operator, its employees and agents from any third-party claims arising from the renter's or passengers' breach of contract, gross negligence or intentional misconduct.
+      </p>
+
+      <h3>10.4 Limitation of Liability</h3>
+      <p>
+        The operator's liability to the renter is limited to the statutory third-party liability insurance amount of €700,000 per incident. Any further claims for damages are excluded to the extent permitted by Greek law.
+      </p>
+
+      <div class="warn">
+        <strong>Liability Disclaimer – Summary:</strong> Jetski Lefkada Rentals is not liable for personal injury or property damage resulting from rule violations, negligence or prohibited conduct by the renter. Renters ride at their own risk and are personally responsible for adequate personal insurance coverage.
+      </div>
+
+      <h2>§ 11 Damage Procedure</h2>
+      <p>In the event of damage, the renter must:</p>
+      <ol>
+        <li>Secure the watercraft and immediately contact the operator: <strong>+30 695 561 2777</strong></li>
+        <li>If involved in an accident: do not continue riding – wait for authority instructions</li>
+        <li>Take photographs of the damage, surroundings and all involved vessels</li>
+        <li>Complete a written incident report together with the operator</li>
+        <li>In case of injury: immediately call <strong>Emergency 112</strong></li>
+        <li>Coast Guard: <strong>108</strong></li>
+      </ol>
+
+      <h2>§ 12 Early Termination</h2>
+      <p>
+        The operator is entitled to terminate the rental immediately without notice or refund if the renter violates safety rules, alcohol or drug use is detected, the watercraft is mishandled, or if authorities require an immediate return to dock.
+      </p>
+
+      <h2>§ 13 Force Majeure</h2>
+      <p>
+        Jetski Lefkada Rentals is not responsible for failures caused by extreme weather, natural disasters, government measures, Greek Coast Guard orders or other unforeseeable events beyond the operator's control. In such cases, the deposit will be fully refunded or a free rebooking offered.
+      </p>
+
+      <h2>§ 14 Data Protection</h2>
+      <p>
+        Personal data is processed in accordance with our Privacy Policy, the GDPR (EU 2016/679) and the Greek Data Protection Act (Law 4624/2019). Full privacy policy: <a href="/privacy">/privacy</a>
+      </p>
+
+      <h2>§ 15 Amendments</h2>
+      <p>
+        Jetski Lefkada Rentals reserves the right to amend these Terms at any time. The current version is available on the website. Confirmed bookings are governed by the Terms in force at the time of booking.
+      </p>
+
+      <h2>§ 16 Governing Law & Jurisdiction</h2>
+      <p>
+        These Terms are exclusively governed by Greek law. All disputes arising from or in connection with this agreement shall be subject to the exclusive jurisdiction of the courts of Lefkada, Greece. Applicable law: Law 4926/2022, P.D. 23/2000, Greek Civil Code, Law 2251/1994 (Consumer Protection).
+      </p>
+
+      <div class="divider"></div>
+      <p style="font-size: 0.82rem; color: #6b7a8d;">Last updated: April 2026 · Jetski Lefkada Rentals · David Goldberg, Nidri, Lefkada, Greece</p>
+
+    </div><!-- /en -->
+
+    <!-- ═══════════════════════════════════════════════════════════ ΕΛΛΗΝΙΚΑ -->
+    <div class="lang-block" data-lang="el" style="display:none">
+
+      <h2>§ 1 Συμβαλλόμενα Μέρη</h2>
+      <p>
+        Η παρούσα σύμβαση μίσθωσης συνάπτεται μεταξύ:<br>
+        <strong>Εκμισθωτής:</strong> David Goldberg, που δραστηριοποιείται ως «Jetski Lefkada Rentals», Λιμάνι Νυδρίου, 311 00 Λευκάδα, Ελλάδα, WhatsApp: +30 695 561 2777<br>
+        <strong>Μισθωτής:</strong> Το πρόσωπο που πραγματοποιεί κράτηση και υπογράφει το έντυπο ασφάλειας.
+      </p>
+
+      <h2>§ 2 Αντικείμενο Σύμβασης</h2>
+      <p>
+        Ο εκμισθωτής παραχωρεί στον μισθωτή, για περιορισμένο χρονικό διάστημα, ένα θαλάσσιο σκάφος αναψυχής (jet ski / personal watercraft) για ψυχαγωγική χρήση στο Ιόνιο Πέλαγος, μπροστά από τη Λευκάδα. Η παραχώρηση γίνεται υπό τους παρακάτω όρους και σύμφωνα με τον Νόμο 4926/2022 και το Προεδρικό Διάταγμα 23/2000.
+      </p>
+
+      <h2>§ 3 Κράτηση & Πληρωμή</h2>
+      <ul>
+        <li>Οι κρατήσεις επιβεβαιώνονται με την καταβολή <strong>προκαταβολής 30%</strong> της συνολικής τιμής.</li>
+        <li>Το υπόλοιπο ποσό καταβάλλεται την ημέρα της μίσθωσης, πριν από την αναχώρηση.</li>
+        <li>Αποδεκτοί τρόποι πληρωμής: Viva Wallet, μετρητά (EUR), πιστωτική/χρεωστική κάρτα.</li>
+        <li><strong>Ελάχιστη ηλικία:</strong> 18 ετών. Απαιτείται επίδειξη έγκυρης ταυτότητας ή διαβατηρίου.</li>
+        <li>Δεν απαιτείται δίπλωμα σκάφους.</li>
+        <li>Σημείο συνάντησης: Αποβάθρα Νυδρίου, Λευκάδα. Οι συντεταγμένες GPS αποστέλλονται με την επιβεβαίωση κράτησης.</li>
+        <li>Ώρες λειτουργίας: 10:00–13:00 και 16:00–19:00, Μάιος έως Σεπτέμβριος.</li>
+      </ul>
+
+      <h2>§ 4 Όροι Ακύρωσης</h2>
+      <table>
+        <thead><tr><th>Χρόνος ακύρωσης</th><th>Επιστροφή χρημάτων</th></tr></thead>
+        <tbody>
+          <tr><td>Περισσότερο από 48 ώρες πριν</td><td>100% – πλήρης επιστροφή</td></tr>
+          <tr><td>24 έως 48 ώρες πριν</td><td>50% επιστροφή</td></tr>
+          <tr><td>Λιγότερο από 24 ώρες</td><td>Χωρίς επιστροφή χρημάτων</td></tr>
+          <tr><td>Ακύρωση λόγω καιρού από εκμισθωτή (Μποφόρ 5+)</td><td>100% ή δωρεάν αλλαγή ημερομηνίας</td></tr>
+        </tbody>
+      </table>
+
+      <h2>§ 5 Καιρικές Συνθήκες & Αναστολή Λειτουργίας</h2>
+      <p>
+        Σύμφωνα με τις οδηγίες του Ελληνικού Λιμενικού Σώματος (Π.Δ. 23/2000), η λειτουργία αναστέλλεται όταν η ταχύτητα ανέμου φτάνει Μποφόρ 5 ή όταν οι καιρικές συνθήκες κρίνονται επικίνδυνες. Η απόφαση λαμβάνεται κατά την κρίση του εκμισθωτή. Οι πελάτες ενημερώνονται αμέσως μέσω WhatsApp. Σε περίπτωση ακύρωσης λόγω καιρού από τον εκμισθωτή, ο μισθωτής δικαιούται πλήρη επιστροφή ή δωρεάν αλλαγή ημερομηνίας.
+      </p>
+
+      <h2>§ 6 Κανόνες Ασφαλείας</h2>
+      <p>Οι παρακάτω κανόνες ασφαλείας είναι υποχρεωτικοί βάσει ελληνικής νομοθεσίας:</p>
+      <ul>
+        <li><strong>Ενημέρωση ασφαλείας:</strong> Κάθε χειριστής πρέπει να παρακολουθήσει υποχρεωτικά 10λεπτη ενημέρωση ασφαλείας και να υπογράψει το σχετικό έντυπο. <span class="law-ref">(Ν. 4926/2022)</span></li>
+        <li><strong>Σωσίβιο γιλέκο:</strong> Η χρήση σωσίβιου γιλέκου είναι υποχρεωτική για όλους τους επιβαίνοντες ανά πάσα στιγμή. Τα γιλέκα παρέχονται από τον εκμισθωτή.</li>
+        <li><strong>Μέγιστη απόσταση από ακτή:</strong> 700 μέτρα. <span class="law-ref">(Π.Δ. 23/2000)</span></li>
+        <li><strong>Ζώνες κολύμβησης:</strong> Απαγορεύεται αυστηρά η είσοδος σε ζώνες κολύμβησης που οριοθετούνται με σημαδούρες. <span class="law-ref">(Π.Δ. 23/2000)</span></li>
+        <li><strong>Μηδενική ανοχή σε αλκοόλ/ναρκωτικά:</strong> Η οδήγηση υπό την επήρεια αλκοόλ ή ναρκωτικών απαγορεύεται από τον ελληνικό νόμο και οδηγεί σε άμεση διακοπή χωρίς επιστροφή χρημάτων.</li>
+        <li><strong>Εξουσιοδοτημένος χειριστής:</strong> Μόνο το πρόσωπο που υπέγραψε την ενημέρωση ασφαλείας επιτρέπεται να χειριστεί το σκάφος.</li>
+        <li><strong>Χωρητικότητα:</strong> Μέγιστο 1 επιβάτης σε μοντέλα 2 θέσεων · μέγιστο 2 επιβάτες σε μοντέλα 3 θέσεων.</li>
+      </ul>
+
+      <h2>§ 7 Υποχρεώσεις Μισθωτή</h2>
+      <p>Ο μισθωτής αναλαμβάνει να:</p>
+      <ul>
+        <li>Χρησιμοποιεί το σκάφος με την επιμέλεια συνετού μισθωτή.</li>
+        <li>Επιστρέψει το σκάφος στην αρχική του κατάσταση.</li>
+        <li>Αναφέρει άμεσα και πλήρως οποιαδήποτε βλάβη ή ζημιά.</li>
+        <li>Συμμορφώνεται με όλους τους κανονισμούς του Ελληνικού Λιμενικού Σώματος και της Λιμεναρχίας Λευκάδας.</li>
+        <li>Μη μεταβιβάζει το σκάφος σε τρίτους.</li>
+      </ul>
+
+      <h2>§ 8 Απαγορευμένες Συμπεριφορές</h2>
+      <p>Απαγορεύονται ρητά:</p>
+      <ul>
+        <li>Ακροβατικά, ανατροπές ή επικίνδυνοι ελιγμοί οποιουδήποτε είδους</li>
+        <li>Υπέρβαση του ορίου των 700 μέτρων από την ακτή</li>
+        <li>Είσοδος σε λιμενικούς ή ναυτιλιακούς χώρους εκτός της καθορισμένης αποβάθρας</li>
+        <li>Προσέγγιση άλλων σκαφών σε απόσταση μικρότερη των 50 μέτρων</li>
+        <li>Είσοδος σε ζώνες κολύμβησης ή πλησίον κολυμβητών</li>
+        <li>Κατανάλωση αλκοόλ ή ναρκωτικών κατά τη διάρκεια μίσθωσης</li>
+        <li>Μεταφορά περισσότερων επιβατών από τη χωρητικότητα του σκάφους</li>
+        <li>Εκούσια ή από βαριά αμέλεια πρόκληση ζημιάς στο σκάφος</li>
+      </ul>
+
+      <h2>§ 9 Ευθύνη & Ασφάλιση</h2>
+
+      <h3>9.1 Ασφάλιση αστικής ευθύνης έναντι τρίτων</h3>
+      <p>
+        Το σκάφος καλύπτεται από υποχρεωτική ασφάλιση αστικής ευθύνης έναντι τρίτων έως <strong>€700.000 ανά περιστατικό</strong>. <span class="law-ref">(Ν. 4926/2022, Π.Δ. 284/1994)</span>
+      </p>
+
+      <h3>9.2 Μη κάλυψη σωματικής βλάβης χειριστή / επιβατών</h3>
+      <div class="warn">
+        <strong>Σημαντική επισήμανση:</strong> Η ασφάλιση του σκάφους <strong>δεν</strong> καλύπτει σωματικές βλάβες του χειριστή ή των επιβατών. Συστήνεται ανεπιφύλακτα η σύναψη ταξιδιωτικής ή αθλητικής ασφάλισης που καλύπτει θαλάσσια σπορ.
+      </div>
+
+      <h3>9.3 Εγγύηση</h3>
+      <p>
+        Ενδέχεται να απαιτηθεί εγγύηση καλής χρήσης. Το ύψος της εξαρτάται από το μοντέλο και ανακοινώνεται κατά τη διαδικασία κράτησης. Η εγγύηση επιστρέφεται πλήρως εφόσον το σκάφος παραδοθεί αναλλοίωτο.
+      </p>
+
+      <h3>9.4 Ευθύνη μισθωτή για ζημιές στο σκάφος</h3>
+      <p>
+        Ζημιές στο σκάφος που προκαλούνται από βαριά αμέλεια ή πρόθεση του μισθωτή βαρύνουν εξ ολοκλήρου τον μισθωτή.
+      </p>
+
+      <h2>§ 10 Αποποίηση Ευθύνης</h2>
+
+      <h3>10.1 Αποκλεισμός ευθύνης εκμισθωτή</h3>
+      <p>Ο εκμισθωτής δεν ευθύνεται για σωματικές βλάβες, υλικές ζημιές ή οικονομικές απώλειες του μισθωτή, επιβατών ή τρίτων που προκύπτουν από:</p>
+      <ul>
+        <li>Μη συμμόρφωση με τους παρόντες όρους ή τους κανόνες ασφαλείας</li>
+        <li>Βαριά αμέλεια ή πρόθεση του μισθωτή</li>
+        <li>Παράβαση ισχυουσών διατάξεων από τον μισθωτή</li>
+        <li>Γεγονότα ανωτέρας βίας</li>
+      </ul>
+
+      <h3>10.2 Προσωπική ευθύνη μισθωτή</h3>
+      <p>
+        Με την υπογραφή της ενημέρωσης ασφαλείας, ο μισθωτής αναλαμβάνει πλήρη ευθύνη για τη χρήση του σκάφους και τη συμμόρφωση με όλες τις ισχύουσες διατάξεις. Ο μισθωτής δηλώνει ότι γνωρίζει και αποδέχεται τους εγγενείς κινδύνους των θαλάσσιων σπορ.
+      </p>
+
+      <h3>10.3 Αποζημίωση (Indemnification)</h3>
+      <p>
+        Ο μισθωτής αναλαμβάνει να αποζημιώσει και να απαλλάξει τον εκμισθωτή, τους υπαλλήλους και τους εντολοδόχους του από κάθε αξίωση τρίτων που προκύπτει από παραβατική, αμελή ή εκ προθέσεως συμπεριφορά του μισθωτή ή των επιβατών.
+      </p>
+
+      <h3>10.4 Περιορισμός ευθύνης</h3>
+      <p>
+        Η ευθύνη του εκμισθωτή έναντι του μισθωτή περιορίζεται στο ύψος της υποχρεωτικής ασφάλισης αστικής ευθύνης, ήτοι €700.000 ανά περιστατικό. Περαιτέρω αξιώσεις αποζημίωσης αποκλείονται στο βαθμό που επιτρέπεται από το ελληνικό δίκαιο.
+      </p>
+
+      <div class="warn">
+        <strong>Περίληψη αποποίησης ευθύνης:</strong> Η Jetski Lefkada Rentals δεν φέρει ευθύνη για σωματικές βλάβες ή υλικές ζημιές που προκύπτουν από παράβαση κανόνων, αμέλεια ή απαγορευμένη συμπεριφορά του μισθωτή. Ο μισθωτής αναλαμβάνει τη δραστηριότητα με δική του ευθύνη και οφείλει να έχει επαρκή προσωπική ασφαλιστική κάλυψη.
+      </div>
+
+      <h2>§ 11 Περίπτωση Ζημιάς & Πρωτόκολλο</h2>
+      <p>Σε περίπτωση ζημιάς, ο μισθωτής οφείλει:</p>
+      <ol>
+        <li>Να ασφαλίσει το σκάφος και να επικοινωνήσει αμέσως με τον εκμισθωτή: <strong>+30 695 561 2777</strong></li>
+        <li>Σε περίπτωση ατυχήματος: να μην συνεχίσει την πλεύση – να αναμείνει οδηγίες αρχών</li>
+        <li>Να φωτογραφίσει τη ζημιά, το περιβάλλον και τα εμπλεκόμενα σκάφη</li>
+        <li>Να συμπληρώσει γραπτό πρωτόκολλο ζημιάς μαζί με τον εκμισθωτή</li>
+        <li>Σε περίπτωση τραυματισμού: άμεση κλήση <strong>Άμεσης Βοήθειας 112</strong></li>
+        <li>Λιμενικό Σώμα: <strong>108</strong></li>
+      </ol>
+
+      <h2>§ 12 Πρόωρη Λήξη</h2>
+      <p>
+        Ο εκμισθωτής δικαιούται να λύσει τη σύμβαση άμεσα, χωρίς προειδοποίηση και χωρίς επιστροφή χρημάτων, εφόσον ο μισθωτής παραβαίνει κανόνες ασφαλείας, διαπιστωθεί κατανάλωση αλκοόλ ή ναρκωτικών, γίνεται ακατάλληλη χρήση του σκάφους, ή αρχές απαιτήσουν άμεση επιστροφή στην αποβάθρα.
+      </p>
+
+      <h2>§ 13 Ανωτέρα Βία</h2>
+      <p>
+        Η Jetski Lefkada Rentals δεν ευθύνεται για αδυναμία εκτέλεσης λόγω ακραίων καιρικών φαινομένων, φυσικών καταστροφών, κυβερνητικών μέτρων, εντολών Λιμενικού Σώματος ή άλλων απρόβλεπτων γεγονότων εκτός ελέγχου. Σε τέτοιες περιπτώσεις η προκαταβολή επιστρέφεται πλήρως ή προσφέρεται δωρεάν αλλαγή ημερομηνίας.
+      </p>
+
+      <h2>§ 14 Προστασία Δεδομένων</h2>
+      <p>
+        Η επεξεργασία προσωπικών δεδομένων γίνεται σύμφωνα με την Πολιτική Απορρήτου μας, τον ΓΚΠΔ (ΕΕ 2016/679) και τον Νόμο 4624/2019. Πλήρης πολιτική απορρήτου: <a href="/privacy">/privacy</a>
+      </p>
+
+      <h2>§ 15 Τροποποιήσεις Όρων</h2>
+      <p>
+        Η Jetski Lefkada Rentals διατηρεί το δικαίωμα τροποποίησης των παρόντων όρων ανά πάσα στιγμή. Η ισχύουσα έκδοση είναι διαθέσιμη στον ιστότοπο. Για ήδη επιβεβαιωμένες κρατήσεις ισχύουν οι όροι κατά τον χρόνο κράτησης.
+      </p>
+
+      <h2>§ 16 Εφαρμοστέο Δίκαιο & Δικαιοδοσία</h2>
+      <p>
+        Οι παρόντες όροι διέπονται αποκλειστικά από το ελληνικό δίκαιο. Για κάθε διαφορά που απορρέει από ή σχετίζεται με την παρούσα σύμβαση αρμόδια είναι αποκλειστικά τα δικαστήρια Λευκάδας, Ελλάδα. Εφαρμοστέα νομοθεσία: Ν. 4926/2022, Π.Δ. 23/2000, Αστικός Κώδικας, Ν. 2251/1994.
+      </p>
+
+      <div class="divider"></div>
+      <p style="font-size: 0.82rem; color: #6b7a8d;">Τελευταία ενημέρωση: Απρίλιος 2026 · Jetski Lefkada Rentals · David Goldberg, Νυδρί, Λευκάδα, Ελλάδα</p>
+
+    </div><!-- /el -->
+
+  </div><!-- /legal-page -->
+
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+          (block as HTMLElement).style.display = block.getAttribute('data-lang') === lang ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
 </LayoutBare>

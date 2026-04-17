@@ -3,8 +3,8 @@ import LayoutBare from "../layouts/LayoutBare.astro";
 ---
 
 <LayoutBare
-  title="Imprint · Jetski Lefkada Rentals"
-  description="Legal information and contact details for Jetski Lefkada Rentals."
+  title="Imprint / Impressum · Jetski Lefkada Rentals"
+  description="Legal information, contact details and copyright notice for Jetski Lefkada Rentals."
   themeColor="#fdfbf4"
 >
   <style>
@@ -14,15 +14,28 @@ import LayoutBare from "../layouts/LayoutBare.astro";
     h1 em { font-style: italic; color: #ff5a36; }
     h2 { font-family: "Fraunces Variable", Georgia, serif; font-size: 1.4rem; font-weight: 400; margin: 2.5rem 0 0.75rem; }
     p, address { font-size: 1rem; line-height: 1.8; color: #2a3a4a; margin-bottom: 1rem; font-style: normal; }
+    ul { font-size: 1rem; line-height: 1.8; color: #2a3a4a; margin-bottom: 1rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
     a { color: #00b3a7; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7a8d; margin-bottom: 3rem; }
     .back:hover { color: #0a1220; }
     .divider { width: 40px; height: 2px; background: linear-gradient(90deg, #ff5a36, #ffc233); margin: 2rem 0; border-radius: 1px; }
+    .family-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #fff8f0; border: 1.5px solid #ffc233;
+      border-radius: 8px; padding: 0.75rem 1.1rem;
+      font-size: 0.9rem; color: #6b4a00; margin-bottom: 1.5rem;
+    }
+    .copyright-block {
+      background: #f5f3ee; border-radius: 8px; padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0; font-size: 0.88rem; color: #2a3a4a; line-height: 1.7;
+    }
+    .copyright-block strong { display: block; margin-bottom: 0.5rem; font-size: 1rem; }
   </style>
 
   <div class="legal-page">
-    <a href="/v2" class="back">
+    <a href="/" class="back">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
       Back to site
     </a>
@@ -30,41 +43,61 @@ import LayoutBare from "../layouts/LayoutBare.astro";
     <h1>Imprint &<br><em>Legal Notice</em></h1>
     <div class="divider"></div>
 
+    <div class="family-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e09000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Family business · Familienunternehmen · Οικογενειακή επιχείρηση
+    </div>
+
     <h2>Business Details</h2>
     <address>
       <strong>Jetski Lefkada Rentals</strong><br>
-      Owner: David Goldberg<br>
-      Nidri Harbour, Lefkada<br>
-      311 00 Lefkada, Greece
+      Trade Name / Handelsname / Εμπορική Επωνυμία<br><br>
+      Inhaber / Owner / Ιδιοκτήτης: <strong>David Goldberg</strong><br>
+      Kundenkontakt / Customer Contact / Επικοινωνία: <strong>Kristina Goldberg</strong><br><br>
+      Sole Proprietorship / Einzelunternehmen / Ατομική Επιχείρηση<br>
+      Nidri Harbour (Λιμάνι Νυδρίου)<br>
+      311 00 Lefkada (Λευκάδα), Greece (Ελλάδα)
     </address>
 
     <h2>Contact</h2>
     <p>
       WhatsApp: <a href="https://wa.me/306955612777">+30 695 561 2777</a><br>
-      Location: Nidri Dock, Lefkada, Ionian Islands, Greece
+      Location: Nidri Dock, Lefkada, Ionian Islands, Greece<br>
+      GPS: 38.7241° N, 20.6991° E
     </p>
 
     <h2>Operating Licence</h2>
     <p>
       Operating under Greek maritime regulations for personal watercraft rental.
       All jetskis are registered and insured in accordance with Greek Law 4926/2022
-      governing recreational watercraft operations.
+      governing recreational watercraft operations and Presidential Decree 23/2000 (water sports at sea).
     </p>
 
     <h2>Liability Insurance</h2>
     <p>
-      Third-party liability coverage: €700,000 per incident.<br>
+      Third-party liability coverage: <strong>€700,000 per incident</strong>.<br>
+      Mandatory insurance pursuant to Greek Law 4926/2022 and P.D. 284/1994.<br>
       Insurance provider details available upon request.
     </p>
 
     <h2>Dispute Resolution</h2>
     <p>
-      In the event of a dispute, Greek law applies. Jurisdiction: Courts of Lefkada, Greece.
-      For consumer disputes, the EU Online Dispute Resolution platform may be used:
+      In the event of a dispute, Greek law applies exclusively. Jurisdiction: Courts of Lefkada, Greece.<br>
+      For EU consumer disputes, the Online Dispute Resolution platform is available at:
       <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>
     </p>
 
+    <h2>Copyright & Intellectual Property</h2>
+    <div class="copyright-block">
+      <strong>© 2026 Jetski Lefkada Rentals · All rights reserved / Alle Rechte vorbehalten</strong>
+      All texts, images, graphics, logos and other content on this website are the intellectual property of Jetski Lefkada Rentals (David Goldberg) unless otherwise stated. Reproduction, distribution or use of any content without prior written permission is prohibited.
+    </div>
+    <p style="font-size: 0.88rem; color: #2a3a4a;">
+      Website design and development: Jetski Lefkada Rentals.<br>
+      Unauthorised use of any material from this website may be subject to legal action under Greek copyright law (Ν. 2121/1993) and EU intellectual property regulations.
+    </p>
+
     <div class="divider"></div>
-    <p style="font-size: 0.85rem; color: #6b7a8d;">Last updated: April 2026</p>
+    <p style="font-size: 0.85rem; color: #6b7a8d;">Last updated: April 2026 · © 2026 Jetski Lefkada Rentals</p>
   </div>
 </LayoutBare>
