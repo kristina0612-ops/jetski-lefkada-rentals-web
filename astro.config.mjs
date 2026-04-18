@@ -11,7 +11,9 @@ export default defineConfig({
   // markieren sich selbst per `export const prerender = false;`
   adapter: vercel(),
   redirects: {
+    "/v1": "/",
     "/v2": "/",
+    "/v3": "/",
   },
   integrations: [react(), sitemap()],
   vite: {
