@@ -18,8 +18,8 @@ unten noch aktuell ist** (Stichproben machen, bei Zweifel Kristina fragen).
 
 | Komponente | Wert |
 |---|---|
-| Account | `kristina0612-ops` (persönlich) |
-| Plan | **unklar – wahrscheinlich Hobby oder Pro-Trial**. Die 99 €/Monat, die Kristina zahlt, sind vermutlich NICHT Vercel sondern **Claude Code Max** (Anthropic ~100 $/Mon). Vercel Pro wäre ~20 $/User. Klärung: Screenshot von <https://vercel.com/account/settings/billing-information> |
+| Account/Team | `kristina0612-ops-projects` (Team-Slug) |
+| Plan | **Pro** (bestätigt 2026-04-18 von Kristina). Commercial Use ist damit rechtlich abgedeckt (Hobby-Plan erlaubt Commercial Use explizit NICHT). |
 | Projekt-Slug | `jetski-lefkada-rentals.com` |
 | Produktions-URL | https://jetski-lefkada-rentals.com |
 | Preview-URLs | `{branch}-{hash}-kristina0612-ops-projects.vercel.app` |
@@ -269,28 +269,42 @@ im Dashboard noch nicht gesetzt → Aufgabe für Kristina.
 
 ---
 
-## 12. Plan klären (offen – am 2026-04-18 korrigiert)
+## 12. Plan: Pro (bestätigt 2026-04-18)
 
-**Ursprüngliche Vermutung:** Kristina zahlt 99 €/Monat für Vercel Pro.
-**Korrektur nach Rückfrage:** Die 99 €/Monat sind sehr wahrscheinlich ihr
-**Claude Code Max Abonnement bei Anthropic** (~100 $/Monat), **nicht Vercel**.
+**Bestätigung:** Kristina hat am 2026-04-18 den Link
+<https://vercel.com/kristina0612-ops-projects> geschickt und „Pro Version"
+bestätigt. Das Suffix `-projects` im Slug zeigt an, dass sie ein **Team-Account**
+aufgesetzt hat (Standard-Form bei Pro).
 
-**Hinweise im Screenshot vom 2026-04-18 (Billing Information):**
-- Nur Kreditkarte (Visa …4704, gültig bis 10/2029) hinterlegt
-- Tax-ID-Feld leer und ungültig – Kristina hat versucht `204202406`
-  einzutragen, ohne Ländercode-Prefix `EL`. Feld bleibt leer bis die
-  offizielle griechische USt-Nummer registriert ist (siehe Memory
-  `project_mydata_compliance.md`).
+### Pro-Features, die uns konkret helfen
 
-**Was wir noch brauchen, um den Plan sicher zu bestätigen:**
-Screenshot von <https://vercel.com/account/plans> ODER
-<https://vercel.com/account/usage> – da steht explizit „Hobby" oder „Pro".
+| Feature | Nutzen für uns | Aktivierung |
+|---|---|---|
+| **Commercial Use** | Rechtlich abgedeckt – Hobby erlaubte das gar nicht | automatisch mit Pro |
+| **Deployment Protection** | Passwort-Schutz für Preview-URLs → `/admin/*` nicht mehr öffentlich auf Previews | Dashboard → Settings → Deployment Protection |
+| **Analytics 1 Jahr Retention** | statt 30 Tage auf Hobby | automatisch mit Pro |
+| **Speed Insights Pro** | Core Web Vitals mit mehr Samples | Dashboard → Settings → Speed Insights |
+| **300s Function Duration** | statt 10s → sichere Zeit für CRM-Operationen | automatisch |
+| **3 GB Function Memory** | statt 1 GB | automatisch |
+| **1 TB Bandwidth / Monat** | statt 100 GB → komfortabel | automatisch |
+| **Audit Logs** | sichtbar wer wann was am Projekt gemacht hat | automatisch |
 
-**Dashboard-URLs (nützlich für Kristina):**
+### Zahlungsdetails
+
+- Zahlungsmethode: Visa …4704 (gültig bis 10/2029) – laut Billing-Screenshot
+- Tax-ID: aktuell leer (offen bis griechische AFM mit VAT-Registrierung da ist
+  → dann Format `EL` + 9 Ziffern, siehe `feedback/todo.md`)
+
+### Dashboard-URLs
+
+- Team-Übersicht: <https://vercel.com/kristina0612-ops-projects>
+- Projekt: <https://vercel.com/kristina0612-ops-projects/jetski-lefkada-rentals.com>
+- Deployments: <https://vercel.com/kristina0612-ops-projects/jetski-lefkada-rentals.com/deployments>
+- Analytics: <https://vercel.com/kristina0612-ops-projects/jetski-lefkada-rentals.com/analytics>
+- Settings: <https://vercel.com/kristina0612-ops-projects/jetski-lefkada-rentals.com/settings>
+- Deployment Protection: <https://vercel.com/kristina0612-ops-projects/jetski-lefkada-rentals.com/settings/deployment-protection>
 - Billing Information: <https://vercel.com/account/settings/billing-information>
-- Invoices: <https://vercel.com/account/invoices>
 - Tokens: <https://vercel.com/account/settings/tokens>
-- Plans: <https://vercel.com/account/plans>
 
 ---
 

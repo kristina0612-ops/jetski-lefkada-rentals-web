@@ -39,7 +39,7 @@ externe Ressourcen berührt.
 |---|---|---|---|---|
 | 1 | **Rate-Limiting auf `/api/admin/login`** | Brute-Force-Angriff auf Passwort | 30 Min | ✅ erledigt 2026-04-18 (`src/lib/rate-limit.ts`, 5 Versuche / 15 Min pro IP) |
 | 2 | **Content-Security-Policy (CSP)** | XSS-Angriffe via injected Scripts | 2 h (wg. Inline-Styles/-Scripts prüfen) | offen |
-| 3 | **Preview-Deployment-Protection** | `/admin/*` auf öffentlichen Preview-URLs | 1 Klick Dashboard (Pro) | offen |
+| 3 | **Preview-Deployment-Protection** | `/admin/*` auf öffentlichen Preview-URLs | 1 Klick Dashboard | 🎯 Pro ist aktiv – Dashboard-Klick offen: <https://vercel.com/kristina0612-ops-projects/jetski-lefkada-rentals.com/settings/deployment-protection> |
 | 4 | **Dependabot** (GitHub) | Bekannte CVEs in Dependencies | 2 Klicks GitHub-Settings | ✅ erledigt 2026-04-18 (Kristina) |
 | 5 | **`npm audit`** Routine | Siehe 4 | manuell / via Dependabot | läuft via Dependabot |
 | 6 | **Admin-Passwort-Hashing** | Bei Leak direkt verwendbar | 1 h (bcrypt/argon2 prüfen) | 🔒 gesperrt auf Supabase-Aktivierung (Login ist STUB) |
