@@ -2,7 +2,7 @@
 // - Stand 2026-04-18: Flyer-Preise sind für BEIDE Jetskis IDENTISCH (von Kristina bestätigt).
 // - Stunden-/Halbtag-/Ganztag-Preise bleiben UNTERSCHIEDLICH pro Jetski (Classic-Preise).
 // - Beach Rides, Exclusive Experiences, VIP Delivery: gleich teuer bei Challenger + Acrobat.
-// - Water Fun: 30€/Person, Jobe Ridge III (3 Sitze).
+// - Water Fun: 30€/Person, Great Big Mable Tube (3 Sitze) – intern auch als "Jobe Ridge III" geführt.
 //
 // FLOTTE: Wir haben 4 PHYSISCHE Einheiten (2× Challenger + 2× Acrobat).
 // Buchungen, Umsatzanalyse und Kalender arbeiten auf Unit-Ebene (jetski_unit_id),
@@ -189,9 +189,10 @@ export const pricingExtras = {
   towableWaterFun: {
     pricePerPerson: 30,
     durationMin: 10,
-    tubeModel: "Jobe Ridge III",
+    tubeModel: "Great Big Mable",
+    tubeModelInternal: "Jobe Ridge III",
     tubeSeats: 3,
-    label: "Water Fun – Jobe Ridge III Tubing (3 Sitze) hinter dem Jetski",
+    label: "Water Fun – Great Big Mable Tubing (3 Sitze) hinter dem Jetski",
   },
   // Kaution: 1.500 € nur bei VIP Delivery Service
   // Quelle: Flyer 2026 ("Deposit: 1,500 € (delivery only)")

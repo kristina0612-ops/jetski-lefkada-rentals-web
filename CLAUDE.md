@@ -21,14 +21,16 @@ Lies diese Datei ZUERST, bevor du antwortest.
 
 Quelle der Wahrheit: `src/data/jetskis.ts` und `DECISIONS.md` – diese Werte sind autoritativ.
 
-Stand 2026-04-17: Nur noch Sea-Doo. Yamahas ausgemustert/verkauft.
+Stand 2026-04-18 (Abend): Flotte korrigiert durch Kristina. 4 Einheiten, alle Sea-Doo, alle supercharged.
 
-| Name           | Marke    | Modell         | PS  | Sitze | Top-Speed | €/Std | €/½-Tag | €/Tag |
-|----------------|----------|----------------|-----|-------|-----------|-------|---------|-------|
-| The Challenger | Sea-Doo  | RXT-X 300      | 300 | 3     | 110 km/h  | €140  | €420    | €690  |
-| The Acrobat    | Sea-Doo  | Spark Trixx    | 90  | 2     | 80 km/h   | €70   | €210    | €350  |
+| #   | Marke    | Modell                                  |
+|-----|----------|-----------------------------------------|
+| 1   | Sea-Doo  | 260 GTX Limited Supercharged            |
+| 2   | Sea-Doo  | 300 GTX Limited Supercharged            |
+| 3   | Sea-Doo  | 260 GTX Limited Supercharged            |
+| 4   | Sea-Doo  | 260 RXT RS Riva Racing Supercharged     |
 
-Alle Modelle: Baujahr 2024. Je 2 Stück pro Modell.
+**TODO (mit Kristina morgen klären):** PS, Sitze, Top-Speed, €/Std, €/½-Tag, €/Tag pro Modell. Die alten Werte (Challenger/Acrobat) wurden verworfen – nicht mehr verwenden. Bis die neuen Preise bestätigt sind: keine Preisangaben nach außen kommunizieren.
 
 **Zusatzangebot:** Water Fun (3-Reifen-Tubing hinter Jetski) – €30 pro Person.
 

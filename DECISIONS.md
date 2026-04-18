@@ -6,48 +6,58 @@ Claude darf NIEMALS Preise oder Regeln erfinden, die hier nicht stehen.
 
 ---
 
-## Flotte & Preisliste (Saison 2026)
+## Flotte (Saison 2026)
 
-Stand 2026-04-17: Flotte reduziert auf nur Sea-Doo (Yamahas ausgemustert/verkauft).
+Stand 2026-04-18 (Abend): Flotte korrigiert durch Kristina. 4 Einheiten, alle Sea-Doo, alle supercharged.
+**Laut offizieller Preisliste/Flyer: alle 4 Jetskis kosten gleich pro Kategorie** – keine Modell-spezifischen Preise.
 
-| Name           | Marke    | Modell         | PS  | Sitze | €/Stunde | €/Halbtag (4h) | €/Ganztag (8h) |
-|----------------|----------|----------------|-----|-------|----------|----------------|----------------|
-| The Challenger | Sea-Doo  | RXT-X 300      | 300 | 3     | €140     | €420           | €690           |
-| The Acrobat    | Sea-Doo  | Spark Trixx    | 90  | 2     | €70      | €210           | €350           |
+| #   | Marke    | Modell                                  |
+|-----|----------|-----------------------------------------|
+| 1   | Sea-Doo  | 260 GTX Limited Supercharged            |
+| 2   | Sea-Doo  | 300 GTX Limited Supercharged            |
+| 3   | Sea-Doo  | 260 GTX Limited Supercharged            |
+| 4   | Sea-Doo  | 260 RXT RS Riva Racing Supercharged     |
 
-**Zusatzangebot: Water Fun / Towable** – 3-Reifen-Tubing hinter dem Jetski, **€30 pro Person** (Dauer ca. 10 Min.).
+Tagline: **„Fastest Jetskis on the Island"**
+Technische Daten (PS, Sitze, Top-Speed) pro Modell: morgen mit Kristina finalisieren.
 
 **Anzahlung:** 30% bei Buchung, Rest am Tag selbst.
 **Zahlungsmethoden:** Viva Wallet, Bar (Euro), Karte.
 
 ---
 
-## Neue Preiskategorien (Flyer 2026)
+## Offizielle Preisliste (Flyer 2026)
 
-Ergänzend zu den Stunden-/Halbtag-/Ganztag-Preisen oben führt der Flyer 2026 folgende Kategorien ein. **Stand 2026-04-18:** Diese Preise gelten für **beide** Jetskis identisch (Challenger und Acrobat kosten gleich in diesen Kategorien). Die Classic-Preise oben bleiben pro Jetski unterschiedlich.
+Quelle: Preislisten-Foto / Print-ready Flyer vom 2026-04-18. **Alle 4 Jetskis kosten gleich** in allen Kategorien.
 
-### Beach Rides (kurze Fahrten ab Dock) – pro Jetski gleich
+### Beach Rides (kurze Fahrten ab Dock)
 - 10 Min – **80 €**
 - 15 Min – **90 €** („BEST")
 - 20 Min – **100 €**
 - 30 Min – **130 €**
 - 60 Min – **200 €** („BESTSELLER")
 
-### Exclusive Experiences – pro Jetski gleich
+### Exclusive Experiences
 - **Sunset Ride** (30 Min) – **130 €**
 - **Couple Ride** (30 Min) – **150 €**
 
-### VIP Delivery Service (Lieferung an Strand/Boot/Yacht/Katamaran) – pro Jetski gleich
-- 1 Stunde – **350 €**
-- Halbtag (4 h) – **450 €**
-- Ganztag (8 h) – **650 €**
-- Wochenpreis – **auf Anfrage**
-- **Kaution:** 1.500 € (nur bei Delivery)
-- **Kraftstoff NICHT inklusive**
+### VIP Delivery Service (VIP)
+Lieferung an Strand, Boot, Yacht oder Katamaran.
+
+- 1 Hour – **350 €**
+- Half Day (4H) – **450 €**
+- Full Day (8H) – **650 €**
+- Week – **On Request**
+- **Kaution:** 1.500 € (nur bei VIP Delivery)
+- **Fuel is not included** (Kraftstoff NICHT inklusive)
+- Delivery to any beach that you want
+- Delivery to boats, yachts, catamarans
 
 ### Towable / Water Fun
-- 10 Min – **30 € pro Person**
-- Tube-Modell: **Jobe Ridge III** (3 Sitze)
+- 10 Min – **30 € pro Person** (TOWABLE ONLY)
+- **Offizieller Marketing-Name (Kunde sieht):** „Great Big Mable" (3-Reifen-Tube, SportsStuff – laut Flyer 2026)
+- **Intern/Spec-Alternative:** „Jobe Ridge III" (Jobe-Marke, 3-Sitzer)
+- Regel: Beide Namen sind gültig. In Marketing-Texten (Website, Social Media, Flyer) primär **„Great Big Mable"** verwenden – bekannterer Name, emotionaler, höheres Suchvolumen. „Jobe Ridge III" bleibt für technische Specs / interne Dokumentation.
 
 ---
 
