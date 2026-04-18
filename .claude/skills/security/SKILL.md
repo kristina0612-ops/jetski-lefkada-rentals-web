@@ -37,16 +37,18 @@ externe Ressourcen berührt.
 
 | # | Lücke | Risiko | Aufwand | Status |
 |---|---|---|---|---|
-| 1 | **Rate-Limiting auf `/api/admin/login`** | Brute-Force-Angriff auf Passwort | 30 Min | offen |
+| 1 | **Rate-Limiting auf `/api/admin/login`** | Brute-Force-Angriff auf Passwort | 30 Min | ✅ erledigt 2026-04-18 (`src/lib/rate-limit.ts`, 5 Versuche / 15 Min pro IP) |
 | 2 | **Content-Security-Policy (CSP)** | XSS-Angriffe via injected Scripts | 2 h (wg. Inline-Styles/-Scripts prüfen) | offen |
 | 3 | **Preview-Deployment-Protection** | `/admin/*` auf öffentlichen Preview-URLs | 1 Klick Dashboard (Pro) | offen |
-| 4 | **Dependabot** (GitHub) | Bekannte CVEs in Dependencies | 2 Klicks GitHub-Settings | offen |
-| 5 | **`npm audit`** Routine | Siehe 4 | manuell / via Dependabot | offen |
-| 6 | **Admin-Passwort-Hashing** | Bei Leak direkt verwendbar | 1 h (bcrypt/argon2 prüfen) | offen |
-| 7 | **CSRF-Token** auf State-Changing API-Routes | Session-Hijacking bei eingeloggtem Admin | 1 h | offen |
+| 4 | **Dependabot** (GitHub) | Bekannte CVEs in Dependencies | 2 Klicks GitHub-Settings | ✅ erledigt 2026-04-18 (Kristina) |
+| 5 | **`npm audit`** Routine | Siehe 4 | manuell / via Dependabot | läuft via Dependabot |
+| 6 | **Admin-Passwort-Hashing** | Bei Leak direkt verwendbar | 1 h (bcrypt/argon2 prüfen) | 🔒 gesperrt auf Supabase-Aktivierung (Login ist STUB) |
+| 7 | **CSRF-Token** auf State-Changing API-Routes | Session-Hijacking bei eingeloggtem Admin | 1 h | 🔒 gesperrt auf Supabase-Aktivierung |
 | 8 | **Input-Validation** (zod o. ä.) auf API-Payloads | SQL-Injection via Supabase-RPC, NoSQL-Injection, Type-Confusion | 2-3 h | offen |
 | 9 | **Subresource Integrity (SRI)** auf externe Scripts | Supply-Chain-Angriff auf CDN | 15 Min (aber GA4 rotiert → tricky) | Abwägung |
 | 10 | **Vercel-Token rotieren** (Kristinas Chat-Leak 2026-04-18) | Vollzugriff auf Deploy-Pipeline | 2 Min Dashboard | **akut** |
+| 11 | **Middleware JWT-Verify** | Auth-Bypass mit beliebigem Dummy-Cookie sobald Supabase aktiv | 30 Min | 🔒 gesperrt auf Supabase-Aktivierung |
+| 12 | **Secret-Scanning + Push-Protection** (GitHub) | Versehentlicher Secret-Leak | 2 Klicks | ✅ erledigt 2026-04-18 (Kristina) |
 
 ---
 

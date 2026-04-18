@@ -1,5 +1,23 @@
 // Middleware: Auth-Guard für /admin Routes
 // Läuft bei jedem Request, blockt Zugriff auf /admin/* ohne Session-Cookie
+//
+// ══════════════════════════════════════════════════════════════════════════
+// ⚠️  SECURITY WARNING (Stand 2026-04-18)
+// ══════════════════════════════════════════════════════════════════════════
+// Diese Middleware prüft NUR die Anwesenheit des Cookies `sb-access-token`,
+// NICHT dessen Gültigkeit (JWT-Signatur).
+//
+// Das ist AKTUELL sicher, weil der Login (/api/admin/login) noch ein Stub ist
+// und keine echten Tokens ausgibt → niemand kann ein valides Cookie erzeugen.
+//
+// 🚨 BEVOR Supabase-Login aktiviert wird, MUSS hier die JWT-Signatur via
+// `supabase.auth.getUser(token)` verifiziert werden. Ohne Verify kann ein
+// Angreifer ein beliebiges Cookie `sb-access-token=anything` setzen und die
+// Middleware lässt ihn durch → kompletter Auth-Bypass auf /admin/*.
+//
+// Siehe: .claude/skills/security/SKILL.md §2 A01, §3
+// Tracking: feedback/todo.md „Gesperrt auf Supabase-Aktivierung"
+// ══════════════════════════════════════════════════════════════════════════
 
 import { defineMiddleware } from "astro:middleware";
 

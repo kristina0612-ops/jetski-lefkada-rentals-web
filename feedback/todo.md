@@ -30,6 +30,32 @@ Dashboard-Aufgaben die Claude nicht selbst machen kann – Kristina muss klicken
       <https://vercel.com/account/billing> → Tax ID → Format: `EL` +
       9-stellige AFM (z. B. `EL204202406`). Aktuell überspringen (Feld leer).
 
+## 🔒 Gesperrt auf Supabase-Aktivierung (Auth-Security)
+
+Diese Punkte sind JETZT ungefährlich, weil `/api/admin/login` ein 503-Stub ist
+und keine echten Tokens ausgibt. Aber sobald Supabase-Auth aktiviert wird,
+MÜSSEN diese drei Punkte ZUSAMMEN mit umgesetzt werden – nicht einzeln, sonst
+entsteht ein Auth-Bypass:
+
+- [ ] **Middleware JWT-Verify einbauen** in `src/middleware.ts`.
+      Ohne Verify = beliebiges Dummy-Cookie `sb-access-token=x` kommt durch
+      und ermöglicht Zugriff auf alle `/admin/*` Seiten.
+      Lösung: `supabase.auth.getUser(accessToken)` mit Fehlerbehandlung
+      (Cookie löschen + redirect bei Invalid).
+- [ ] **Admin-Passwort-Hashing prüfen** – Supabase hasht by default mit bcrypt.
+      Nur sicherstellen: kein Klartext-Vergleich im Code, kein Passwort in
+      Logs/Errors. Siehe Security-Skill §2 A02.
+- [ ] **CSRF-Schutz** auf state-changing API-Routes
+      (`/api/bookings/*`, `/api/expenses/*`, `/api/admin/*` POST/PUT/DELETE).
+      SameSite=Lax hilft gegen die meisten CSRF, aber für Admin-Routes
+      zusätzlich Double-Submit-Token oder Origin-Header-Check empfehlenswert.
+
+**Reihenfolge beim Supabase-Go-Live:**
+1. Erst alle drei Punkte oben in einem PR umsetzen
+2. Lokal testen (Dummy-Cookie probieren → muss 401/redirect geben)
+3. Deploy + sofort Produktion testen mit echtem Login
+4. Dann Security-Skill §1 Lücken-Tabelle updaten
+
 ## CRM-Gesamtsystem (Auftrag vom 2026-04-17)
 
 Bevor Module gebaut werden können, braucht Claude Antworten auf folgende Fragen:
