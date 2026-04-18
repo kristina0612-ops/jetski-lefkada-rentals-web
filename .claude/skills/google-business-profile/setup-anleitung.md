@@ -46,12 +46,12 @@ Account anlegen: https://accounts.google.com/signup
 
 1. Frage: *„Möchten Sie einen Standort hinzufügen, an dem Kunden Sie besuchen können?"* → **Ja**
 2. Adresse:
-   - **Straße:** Nidri Harbor / Nidri Dock
-   - **Stadt:** Nidri (Λευκάδα)
+   - **Straße:** Lygia Port (Λιμάνι Λυγιάς)
+   - **Stadt:** Lefkada (Λευκάδα) / Ortsteil Lygia (Λυγιά)
    - **Postleitzahl:** 311 00
    - **Land:** Griechenland
 3. Google öffnet eine Karte → **Pin exakt auf den Dock ziehen**
-4. GPS muss bei **38.7241°N, 20.6991°E** landen (das sind die Koordinaten die wir auch auf unserer Website verwenden – `src/components/v2/Faq2.astro` und `src/pages/safety.astro`)
+4. GPS muss bei **38.7893°N, 20.7192°E** landen (das sind die Koordinaten die wir auch auf unserer Website verwenden – `src/pages/imprint.astro` und `src/components/v2/Faq2.astro`)
 5. *„Bieten Sie auch Lieferdienste an?"* → **Nein** (Kunden kommen zu uns)
 
 ---
@@ -76,8 +76,8 @@ Google prüft ob Du wirklich der Inhaber bist. Optionen:
 **Video-Verifizierung (empfohlen):**
 
 Google zeigt eine Anleitung. Im Video musst Du zeigen:
-- Das Nidri-Dock mit Jetskis im Hintergrund
-- Einen der Jetskis mit sichtbarem Modellnamen (z.B. *The Cruiser* auf der Seite)
+- Das Lygia Port-Dock mit Jetskis im Hintergrund
+- Einen der Jetskis mit sichtbarem Modellnamen (z.B. *The Challenger* auf der Seite)
 - Optional: Flyer oder Visitenkarte mit Firmenname
 
 Tipps:
@@ -101,7 +101,7 @@ Sobald die E-Mail *„Ihr Unternehmen ist verifiziert"* kommt:
 
 Vorschlag – fertig zum Copy-Paste:
 
-> **Feel the Thrill. Live the Moment.** Family-run jet ski rentals at Nidri dock, Lefkada since 2019. Four fast 2024 jet skis – Yamaha VX Cruiser HO, Yamaha FX SVHO, Sea-Doo RXT-X 300, and Sea-Doo Spark Trixx. Hourly, half-day, or full-day rentals. No boat license needed – 10-minute safety briefing at the dock. Open daily May–September, 10:00–13:00 and 16:00–19:00. Family-friendly, life jackets and insurance included. Run by David & Kristina Goldberg. WhatsApp David: +30 695 561 2777.
+> **Feel the Thrill. Live the Moment.** Family-run jet ski rentals at Lygia Port, Lefkada since 2019. Two 2024 Sea-Doos – the Sea-Doo RXT-X 300 (3 seats, 300 HP) and the Sea-Doo Spark Trixx (2 seats, 90 HP). Hourly rates, half-day, full-day, plus short beach rides from 10 minutes, sunset rides, couple rides, VIP delivery to your beach or boat, and Water Fun tubing. No boat license needed – 10-minute safety briefing at the dock. Open daily May–September, 10:00–13:00 and 16:00–19:00. Family-friendly, life jackets and insurance included. Run by David & Kristina Goldberg. WhatsApp David: +30 695 561 2777.
 
 *Sag Bescheid wenn Du das anpassen willst – ich zeige Dir die überarbeitete Version vor dem Einpflegen.*
 
@@ -110,25 +110,25 @@ Vorschlag – fertig zum Copy-Paste:
 Minimum 10 Bilder. Checkliste:
 - [ ] **Logo** (quadratisch, min. 720×720)
 - [ ] **Cover-Foto** (quer 16:9, zeigt Flotte oder Action)
-- [ ] The Cruiser – einzeln
-- [ ] The Challenger – einzeln
-- [ ] The Voyager – einzeln
-- [ ] The Acrobat – einzeln
+- [ ] The Challenger (Sea-Doo RXT-X 300) – einzeln
+- [ ] The Acrobat (Sea-Doo Spark Trixx) – einzeln
 - [ ] Dock von oben (Drohnenfoto ideal)
 - [ ] Action-Shot auf dem Wasser
 - [ ] David & Kristina als Team-Foto
 - [ ] Safety-Briefing-Szene
+- [ ] Water-Fun-Tube (Jobe Ridge III) in Aktion
+- [ ] Sonnenuntergang / Golden-Hour-Return
 
 ### 6.4 – Produkte (4 Stück)
 
-Für jeden Jetski ein Produkt-Listing:
+Für jedes Sea-Doo-Modell ein Produkt-Listing:
 
 | Produkt | Preis (Stunde) | Beschreibung |
 |---|---|---|
 | The Acrobat – Sea-Doo Spark Trixx | €70 | 90 HP, 2 seats, 80 km/h. Perfect for tricks and first-timers. |
-| The Cruiser – Yamaha VX Cruiser HO | €95 | 180 HP, 3 seats, 104 km/h. Comfortable all-rounder. |
-| The Voyager – Yamaha FX SVHO | €120 | 250 HP, 3 seats, 107 km/h. Long-distance cruiser. |
 | The Challenger – Sea-Doo RXT-X 300 | €140 | 300 HP, 3 seats, 110 km/h. Pure power. |
+
+Zusätzlich als separates Produkt / Service: **Water Fun – Towable Jobe Ridge III** (€30 pro Person, 10 Minuten).
 
 Link jedes Produkt auf die Website.
 
@@ -157,7 +157,7 @@ Google erlaubt Inhabern eigene Q&A. Aus dem FAQ-Draft (`.claude/drafts/faq-conte
 **A:** *From €70/hour for the Spark Trixx up to €140/hour for the Sea-Doo RXT-X 300. Full price list on our website.*
 
 **F:** *Where do we meet?*
-**A:** *Nidri dock, Lefkada (GPS 38.7241°N, 20.6991°E). Exact pin is sent via WhatsApp after you book. Parking at the dock.*
+**A:** *Lygia Port, Lefkada (GPS 38.7893°N, 20.7192°E). Exact pin is sent via WhatsApp after you book. Parking at the dock.*
 
 ---
 

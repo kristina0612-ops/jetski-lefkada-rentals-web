@@ -58,7 +58,7 @@ Die Bilddatei selbst liegt (sobald Kristina sie ablegt) unter `assets/brand/flye
 - **Szene:** Sonnenuntergang über dem Ionischen Meer, Jetski-Gruppe rast auf Kamera zu
 - **Hauptfigur:** Junge blonde Frau, pinkes Bikini-Top, Sonnenbrille, Haare im Wind, fährt einen gelb-schwarzen Jetski direkt auf den Betrachter zu
 - **Nebenfiguren:** Mann links hinten (schwarzes Tank-Top, Sonnenbrille), Frau rechts hinten (rot)
-- **Umgebung:** Palmen links und rechts, Klippen mit Häusern rechts (erinnert an Nidri), Vögel am Himmel, kleine Sonnenbrille als Deko unten rechts
+- **Umgebung:** Palmen links und rechts, Klippen mit Häusern rechts (erinnert an die Lefkada-Ostküste), Vögel am Himmel, kleine Sonnenbrille als Deko unten rechts
 
 ### Farbpalette
 - **Primär:** Sunset-Orange/Rot (`#FF6B2C`-Bereich), Deep-Purple/Blau (`#2B1B5E`-Bereich)
@@ -105,5 +105,5 @@ um Markenkonsistenz zu halten:
 
 - **Haupt-Slogan:** „Feel the Thrill. Live the Moment."
 - **Tagline:** „The Fastest Jet Skis on the Island."
-- **Signatur-Zusatz:** „Open Daily – Nidri Dock, Lefkada"
+- **Signatur-Zusatz:** „Open Daily – Lygia Port, Lefkada"
 - **Farbcode bei neuen Designs:** Sunset-Orange + Signalgelb + Deep-Blue

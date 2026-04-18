@@ -9,7 +9,7 @@ Freundlich, direkt, enthusiastisch – wie David selbst spricht. Kurze Sätze. A
 
 **GUT:**
 > Hey Marco! Great choice – the Spark Trixx is perfect for Wednesday.
-> You're confirmed for 10:00 at Nidri dock. Any questions? 
+> You're confirmed for 10:00 at Lygia Port. Any questions? 
 > WhatsApp David: +30 695 561 2777
 > See you on the water! – Kristina
 
@@ -20,8 +20,8 @@ Freundlich, direkt, enthusiastisch – wie David selbst spricht. Kurze Sätze. A
 ## Verfügbarkeitsanfrage (Deutsch)
 
 **GUT:**
-> Hallo Stefan! Der Voyager ist am 25. Juli ab 14:00 frei.
-> €360 für den Halbtag – passt das?
+> Hallo Stefan! Der Challenger ist am 25. Juli ab 14:00 frei.
+> €420 für den Halbtag – passt das?
 > Direkt buchen oder Fragen? Schreib David: +30 695 561 2777
 
 **NICHT:** „Sehr geehrter", „Mit freundlichen Grüßen", übertriebene Höflichkeit
@@ -32,7 +32,7 @@ Freundlich, direkt, enthusiastisch – wie David selbst spricht. Kurze Sätze. A
 
 **GUT:**
 > Hey Lisa, bad news – the Challenger broke down yesterday.
-> We can offer you the Voyager (same power, slightly more style) or refund you 100%.
+> We can offer you the Acrobat (lighter, super playful) or refund you 100%.
 > Your call. Let us know ASAP so we can book backup. – Kristina
 
 **NICHT:** Lange Ausreden, übertriebene Entschuldigungen, vage Lösungen

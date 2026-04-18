@@ -19,7 +19,7 @@ Kein Marketingsprech. Keine leeren Phrasen.
 - **Kein „sehr geehrter Herr/Frau"** – immer beim Vornamen wenn bekannt
 - **Kein „Es tut uns sehr leid dass..."** mit drei Absätzen – ein Satz reicht
 - **Kein übermäßiges Ausrufezeichen-Ketten** (nicht: „Super!!! Danke!!!")
-- **Spezifisch** sein – „Nidri-Dock, 10:00" statt „zu dem vereinbarten Ort und Zeitpunkt"
+- **Spezifisch** sein – „Lygia Port, 10:00" statt „zu dem vereinbarten Ort und Zeitpunkt"
 
 ---
 
@@ -27,14 +27,14 @@ Kein Marketingsprech. Keine leeren Phrasen.
 
 ### Buchungsbestätigung (Englisch)
 > "Hey Marco! Great choice – the Spark Trixx is perfect for Wednesday.
-> You're confirmed for 10:00 at Nidri dock. I'll send you the GPS pin.
+> You're confirmed for 10:00 at Lygia Port. I'll send you the GPS pin.
 > Any questions? WhatsApp David: +30 695 561 2777.
 > See you on the water! – Kristina"
 
 ### Buchungsanfrage beantworten (Deutsch)
-> "Hallo Sophie! Der Voyager ist am Mittwoch von 10–13 Uhr frei.
-> Anzahlung: 30% (€108) über Viva Wallet oder bar am Dock.
-> Treffpunkt: Nidri-Hafen, GPS schick ich Dir bei Bestätigung.
+> "Hallo Sophie! Der Challenger ist am Mittwoch von 10–13 Uhr frei.
+> Anzahlung: 30% (€126) über Viva Wallet oder bar am Dock.
+> Treffpunkt: Lygia Port, GPS schick ich Dir bei Bestätigung.
 > Passt Dir das? – Kristina"
 
 ### Auf eine 3-Sterne-Review antworten
@@ -75,7 +75,7 @@ Kein Marketingsprech. Keine leeren Phrasen.
 
 | Situation | Phrase |
 |-----------|--------|
-| Bestätigung | "You're confirmed for [Uhrzeit] at Nidri dock." |
+| Bestätigung | "You're confirmed for [Uhrzeit] at Lygia Port." |
 | GPS schicken | "I'll send you the GPS pin closer to your booking." |
 | Fragen? | "Any questions? WhatsApp David: +30 695 561 2777" |
 | Verabschiedung | "See you on the water!" |

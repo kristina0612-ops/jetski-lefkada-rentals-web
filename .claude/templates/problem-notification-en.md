@@ -5,7 +5,7 @@ Hi {{NAME}},
 Bad news – {{PROBLEM}} (e.g., "the Challenger broke down yesterday").
 
 Here's what we can offer:
-- {{OPTION_A}} (e.g., "the Voyager instead – same power, same price")
+- {{OPTION_A}} (e.g., "the Acrobat instead – lighter, super playful")
 - {{OPTION_B}} (e.g., "full refund")
 
 Your call. Let us know ASAP.

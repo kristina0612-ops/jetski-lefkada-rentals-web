@@ -7,7 +7,7 @@ description: Use whenever customer-facing text, website copy, social media posts
 
 ## Core fact
 Jetski Lefkada Rentals is a **family business** run by **David & Kristina Goldberg**.
-Founded **2019** in Nidri, Lefkada, Greece.
+Founded **2019** in Lygia, Lefkada, Greece.
 
 ## The two people
 

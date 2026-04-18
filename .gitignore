@@ -3,3 +3,14 @@ node_modules/
 .playwright-mcp/
 dist/
 .claude/scheduled_tasks.lock
+
+# Environment Variables – NIEMALS committen (Supabase-Keys, Tokens)
+.env
+.env.*
+!.env.example
+
+# OS / Editor Noise
+.DS_Store
+Thumbs.db
+.vscode/*.log
+*.log

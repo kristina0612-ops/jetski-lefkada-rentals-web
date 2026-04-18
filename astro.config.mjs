@@ -1,19 +1,19 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://jetski-lefkada-rentals.com",
-  output: "hybrid", // Hybrid-Mode: Marketing-Pages statisch, CRM/API dynamisch
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-  }),
+  // output: "static" ist Default in Astro 5. Dynamische Routes (/admin/*, /api/*)
+  // markieren sich selbst per `export const prerender = false;`
+  adapter: vercel(),
   redirects: {
     "/v2": "/",
   },
-  integrations: [react()],
+  integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
     server: {

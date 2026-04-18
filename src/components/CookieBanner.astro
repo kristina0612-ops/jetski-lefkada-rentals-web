@@ -1,0 +1,111 @@
+---
+// DSGVO-konformer Cookie-Banner (Opt-In für GA4)
+// Vercel Web Analytics läuft separat und cookie-frei – braucht keinen Consent.
+// Banner erscheint nur, solange localStorage['cookie-consent'] nicht gesetzt ist.
+//
+// Werte:
+//   "accepted" → GA4 wird geladen, dataLayer + gtag('config') werden ausgeführt
+//   "rejected" → GA4 bleibt inaktiv, keine Cookies
+//
+// Wahl kann jederzeit widerrufen werden: localStorage.removeItem('cookie-consent')
+// → auf Privacy-Page ein "Cookie-Einstellungen ändern"-Button (siehe Privacy-Seite).
+
+const GA_ID = "G-MBLR2ODZES";
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-live="polite"
+  aria-labelledby="cookie-banner-title"
+  hidden
+  class="fixed inset-x-0 bottom-0 z-[9999] border-t border-white/10 bg-[#050910]/95 px-4 py-4 text-sm text-white/90 backdrop-blur-md sm:px-6"
+>
+  <div class="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <p id="cookie-banner-title" class="flex-1 leading-relaxed">
+      We use essential cookies to make this site work, and optional analytics
+      cookies (Google Analytics) to understand how visitors use it. You can
+      accept or reject optional cookies.{" "}
+      <a href="/privacy" class="underline decoration-dotted underline-offset-2 hover:text-white">
+        Privacy policy
+      </a>
+    </p>
+    <div class="flex flex-shrink-0 gap-2">
+      <button
+        type="button"
+        id="cookie-reject"
+        class="rounded-md border border-white/20 px-4 py-2 text-xs font-medium uppercase tracking-wider transition hover:bg-white/10"
+      >
+        Reject
+      </button>
+      <button
+        type="button"
+        id="cookie-accept"
+        class="rounded-md bg-[#ff5a36] px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition hover:bg-[#ff6a46]"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ GA_ID }}>
+  (function () {
+    const STORAGE_KEY = "cookie-consent";
+    const banner = document.getElementById("cookie-banner");
+    const accept = document.getElementById("cookie-accept");
+    const reject = document.getElementById("cookie-reject");
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", GA_ID, { anonymize_ip: true });
+    }
+
+    function hide() {
+      if (banner) banner.hidden = true;
+    }
+
+    function show() {
+      if (banner) banner.hidden = false;
+    }
+
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "accepted") {
+      loadGA();
+      hide();
+    } else if (stored === "rejected") {
+      hide();
+    } else {
+      show();
+    }
+
+    accept?.addEventListener("click", function () {
+      localStorage.setItem(STORAGE_KEY, "accepted");
+      loadGA();
+      hide();
+    });
+
+    reject?.addEventListener("click", function () {
+      localStorage.setItem(STORAGE_KEY, "rejected");
+      hide();
+    });
+
+    // Von der Privacy-Seite triggerbar, damit Besucher ihre Wahl ändern können:
+    //   document.dispatchEvent(new CustomEvent('cookie:reset'))
+    document.addEventListener("cookie:reset", function () {
+      localStorage.removeItem(STORAGE_KEY);
+      show();
+    });
+  })();
+</script>

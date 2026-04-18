@@ -66,14 +66,14 @@ Erste Priorität: die Top-10 Fragen die alle Anbieter haben. Rest kann als „We
 **DE:** 18 Jahre mit gültigem Lichtbildausweis (Reisepass, Personalausweis oder Führerschein).
 
 ### Q7. Can children ride as passengers?
-**EN:** Yes, as passengers on our 3-seater jetskis (Cruiser, Challenger, Voyager). All passengers must wear a life jacket. For safety, we recommend children be at least 8 years old and comfortable in the water. **[David bestätigen: Mindestalter Passagier]**
+**EN:** Yes, as passengers on our 3-seater jetski (The Challenger). All passengers must wear a life jacket. For safety, we recommend children be at least 8 years old and comfortable in the water. **[David bestätigen: Mindestalter Passagier]**
 
-**DE:** Ja, als Mitfahrer auf unseren 3-Sitzer-Jetskis (Cruiser, Challenger, Voyager). Alle Mitfahrer müssen eine Schwimmweste tragen. Aus Sicherheitsgründen empfehlen wir Kinder ab 8 Jahren, die wassersicher sind. **[David bestätigen]**
+**DE:** Ja, als Mitfahrer auf unserem 3-Sitzer-Jetski (The Challenger). Alle Mitfahrer müssen eine Schwimmweste tragen. Aus Sicherheitsgründen empfehlen wir Kinder ab 8 Jahren, die wassersicher sind. **[David bestätigen]**
 
 ### Q8. Do I need experience?
-**EN:** No. If it's your first time, tell us when you book. Our briefing covers everything – starting, turning, stopping, safety rules. Beginners often choose the Cruiser or Acrobat, which are easier to handle.
+**EN:** No. If it's your first time, tell us when you book. Our briefing covers everything – starting, turning, stopping, safety rules. Beginners often choose the Acrobat (Spark Trixx, 90 HP) – lighter and easier to handle.
 
-**DE:** Nein. Falls es Dein erstes Mal ist, sag uns bei der Buchung Bescheid. Unser Briefing deckt alles ab – Starten, Lenken, Stoppen, Sicherheitsregeln. Anfänger wählen oft den Cruiser oder Acrobat, die einfacher zu fahren sind.
+**DE:** Nein. Falls es Dein erstes Mal ist, sag uns bei der Buchung Bescheid. Unser Briefing deckt alles ab – Starten, Lenken, Stoppen, Sicherheitsregeln. Anfänger wählen oft den Acrobat (Spark Trixx, 90 PS) – leichter und einfacher zu fahren.
 
 ---
 
@@ -85,9 +85,9 @@ Erste Priorität: die Top-10 Fragen die alle Anbieter haben. Rest kann als „We
 | Jetski | 1 hour | Half-day (4h) | Full day (8h) |
 |--------|--------|---------------|---------------|
 | The Acrobat (Sea-Doo Spark Trixx, 90 HP, 2 seats) | €70 | €210 | €350 |
-| The Cruiser (Yamaha VX Cruiser HO, 180 HP, 3 seats) | €95 | €290 | €490 |
-| The Voyager (Yamaha FX SVHO, 250 HP, 3 seats) | €120 | €360 | €590 |
 | The Challenger (Sea-Doo RXT-X 300, 300 HP, 3 seats) | €140 | €420 | €690 |
+
+Zusätzlich (gilt für beide Jetskis gleich): Beach Rides ab €80 / 10 min, Sunset Ride €130 / 30 min, Couple Ride €150 / 30 min, VIP Delivery ab €350 / Stunde, Water Fun €30 / Person.
 
 **DE:** Preise pro Jetski (Saison 2026): *(gleiche Tabelle)*
 
@@ -170,23 +170,21 @@ Erste Priorität: die Top-10 Fragen die alle Anbieter haben. Rest kann als „We
 ## 6. Jetskis & Riding
 
 ### Q22. What jetskis do you have?
-**EN:** Four 2024 jetskis, all top-of-line:
+**EN:** Two 2024 Sea-Doo jetskis (each available as 2 units):
 - **The Acrobat** – Sea-Doo Spark Trixx, 90 HP, 2-seater, top speed 80 km/h – perfect for tricks and first-timers
-- **The Cruiser** – Yamaha VX Cruiser HO, 180 HP, 3-seater, top speed 104 km/h – comfortable all-rounder
-- **The Voyager** – Yamaha FX SVHO, 250 HP, 3-seater, top speed 107 km/h – long-distance cruiser
 - **The Challenger** – Sea-Doo RXT-X 300, 300 HP, 3-seater, top speed 110 km/h – pure power
 
 **DE:** *(gleiche Struktur auf Deutsch)*
 
 ### Q23. How many people can ride at once?
-**EN:** Acrobat: 2 people (including driver). Cruiser, Voyager, Challenger: up to 3 people. Combined weight matters – ask us if you're unsure.
+**EN:** Acrobat: 2 people (including driver). Challenger: up to 3 people. Combined weight matters – ask us if you're unsure.
 
-**DE:** Acrobat: 2 Personen (inkl. Fahrer). Cruiser, Voyager, Challenger: bis zu 3 Personen. Gesamtgewicht ist relevant – frag uns bei Unsicherheit.
+**DE:** Acrobat: 2 Personen (inkl. Fahrer). Challenger: bis zu 3 Personen. Gesamtgewicht ist relevant – frag uns bei Unsicherheit.
 
 ### Q24. Can my partner/friend ride with me?
-**EN:** Yes, on our 3-seater models. Only the driver needs to be 18+ – passengers can be younger if they're confident swimmers.
+**EN:** Yes, on The Challenger (3-seater). Only the driver needs to be 18+ – passengers can be younger if they're confident swimmers.
 
-**DE:** Ja, auf unseren 3-Sitzer-Modellen. Nur der Fahrer muss 18+ sein – Mitfahrer dürfen jünger sein, wenn sie sicher schwimmen können.
+**DE:** Ja, auf dem Challenger (3-Sitzer). Nur der Fahrer muss 18+ sein – Mitfahrer dürfen jünger sein, wenn sie sicher schwimmen können.
 
 ### Q25. Do you offer guided tours?
 **EN:** **[David bestätigen: Gibt es geführte Touren? Falls ja, welche? – z.B. Meganisi-Tour, Skorpios, Papanikolis-Höhle]**

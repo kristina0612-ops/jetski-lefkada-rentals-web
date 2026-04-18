@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import CookieBanner from "../components/CookieBanner.astro";
+import CtaTracker from "../components/CtaTracker.astro";
 
 interface Props {
   title?: string;
@@ -32,20 +36,14 @@ const {
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <link rel="dns-prefetch" href="https://assets.mixkit.co" />
 
-    <!-- Vercel Web Analytics (DSGVO-konform, keine Cookies, anonymisiert) -->
-    <script defer src="/_vercel/insights/script.js"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBLR2ODZES"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MBLR2ODZES');
-    </script>
+    <!-- Google Analytics 4 wird NICHT direkt hier geladen – Opt-In via CookieBanner -->
   </head>
   <body class="!bg-transparent !min-h-0">
     <slot />
+    <CookieBanner />
+    <Analytics />
+    <SpeedInsights />
+    <CtaTracker />
     <script>
       import Lenis from "lenis";
       const mq = window.matchMedia("(prefers-reduced-motion: reduce)");

@@ -22,8 +22,8 @@ Automatisch triggern sobald die aktuelle Aufgabe einen dieser Bereiche berührt:
 | Feld | Wert |
 |---|---|
 | **Business name** | Jetski Lefkada Rentals |
-| **Adresse** | Nidri-Dock, Nidri 311 00, Lefkada, Griechenland |
-| **GPS** | 38.7241°N, 20.6991°E |
+| **Adresse** | Lygia Port (Λιμάνι Λυγιάς), 311 00 Lefkada, Griechenland |
+| **GPS** | 38.7893°N, 20.7192°E |
 | **Telefon** | +30 695 561 2777 (David, WhatsApp) |
 | **Website** | https://www.jetski-lefkada-rentals.com |
 | **Instagram** | @jetski__lefkada (doppelter Underscore!) |
@@ -39,7 +39,7 @@ Datenquellen (nie duplizieren, immer auf diese verweisen):
 - Geschäftsdaten: `DECISIONS.md`
 - Kontakt/Brand: `.claude/skills/brand-assets/SKILL.md`
 - Flotte: `src/data/jetskis.ts`
-- GPS-Herkunft: Commit 71a8a1d (auch in `src/components/v2/Faq2.astro` und `src/pages/safety.astro`)
+- GPS-Herkunft: `src/pages/imprint.astro` (autoritative Quelle seit Standortwechsel 2026-04-18) + `src/components/v2/Faq2.astro`
 
 ## Einrichtung
 
@@ -48,7 +48,7 @@ Vollständige Schritt-für-Schritt-Anleitung: `setup-anleitung.md`
 Kurzversion:
 1. Business-Google-Account vorbereiten
 2. business.google.com → Profil anlegen
-3. Adresse + GPS-Pin setzen (38.7241°N, 20.6991°E)
+3. Adresse + GPS-Pin setzen (38.7893°N, 20.7192°E)
 4. Videoverifizierung (schneller als Postkarte)
 5. Website + Instagram einpflegen
 6. Fotos hochladen (min. 10)
@@ -59,8 +59,8 @@ Kurzversion:
 
 ## Optimierungs-Checkliste
 
-- [ ] **Fotos** – min. 10: je ein Foto pro Jetski (Cruiser, Challenger, Voyager, Acrobat), Dock von oben, Action-Shot, Safety-Briefing, Team-Foto David & Kristina, Logo/Flyer, Sonnenuntergang
-- [ ] **Produkte** – 4 Produkte (pro Jetski-Modell) mit Stundenpreis + Link zur Website
+- [ ] **Fotos** – min. 10: je ein Foto pro Sea-Doo-Modell (Challenger, Acrobat), Dock von oben, Action-Shot, Safety-Briefing, Team-Foto David & Kristina, Logo/Flyer, Sonnenuntergang, Water-Fun-Tube
+- [ ] **Produkte** – 2 Produkte (pro Sea-Doo-Modell) mit Stundenpreis + Link zur Website
 - [ ] **Attribute** – *Online-Reservierung*, *Familienfreundlich*, *Parkplatz vorhanden*
 - [ ] **Services** – Stundenmiete, Halbtagesmiete (4h), Ganztagesmiete (8h); Kurzfahrten 10/20/30 min + Wochenmiete erst wenn Preise final (offen seit 2026-04-17)
 - [ ] **Beschreibung** – 750 Zeichen, Slogan *„Feel the Thrill. Live the Moment."* + „Family-run since 2019"

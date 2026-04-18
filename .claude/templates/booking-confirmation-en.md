@@ -3,7 +3,7 @@
 Hi {{NAME}}!
 
 Great choice – the {{JETSKI}} is perfect for {{DATE}}.
-You're confirmed for {{TIME}} at Nidri dock. 
+You're confirmed for {{TIME}} at Lygia Port. 
 
 **What to bring:**
 - ID + driver's license

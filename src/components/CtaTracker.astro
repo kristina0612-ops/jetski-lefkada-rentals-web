@@ -1,0 +1,28 @@
+---
+// CTA-Click-Tracker
+// Delegated click listener auf document. Jeder Klick auf ein Element mit
+// `data-cro="…"` wird gedoppelt getrackt:
+//   1. Vercel Analytics (cookie-frei, immer aktiv – via @vercel/analytics track())
+//   2. Google Analytics 4 (nur wenn Consent via CookieBanner erteilt wurde)
+//
+// So bleibt Opt-in respektiert: ohne Consent läuft nur die cookie-freie Zählung,
+// GA4 erhält nichts solange `window.gtag` nicht geladen wurde.
+---
+
+<script>
+  import { track } from "@vercel/analytics";
+
+  document.addEventListener("click", (e) => {
+    const el = (e.target as Element | null)?.closest("[data-cro]") as HTMLElement | null;
+    if (!el) return;
+    const name = el.dataset.cro;
+    if (!name) return;
+
+    track(name);
+
+    const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+    if (typeof gtag === "function") {
+      gtag("event", name, { event_category: "cta" });
+    }
+  });
+</script>
