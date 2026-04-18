@@ -64,6 +64,67 @@ export interface Jetski {
   totalUnits: number;
 }
 
+// --- 2026 FLEET (Kristina-korrigiert 2026-04-18 Abend) ---
+// Temporäre Struktur für die Homepage-Fleet-Section bis finale Preise/Specs
+// bestätigt sind. Wird von src/components/v2/Fleet2.astro konsumiert.
+// Die alte `jetskis`-Konstante unten bleibt vorerst bestehen, weil Admin-Bereich
+// + deaktivierter Calculator noch darauf referenzieren. Refactor morgen.
+export interface JetskiModel2026 {
+  id: string;
+  brand: string;
+  model: string;
+  tagline: string;
+  badge: string;
+  image: string;
+  accent: string;
+  featured?: boolean;
+  availableToday: number;
+}
+
+export const jetskiModels2026: JetskiModel2026[] = [
+  {
+    id: "gtx-300",
+    brand: "Sea-Doo",
+    model: "300 GTX Limited Supercharged",
+    tagline: "Fastest on the island.",
+    badge: "2026 · Supercharged · Flagship",
+    image: "https://images.unsplash.com/photo-1595351298020-038700609878?w=1400&q=85&auto=format&fit=crop",
+    accent: "#ffa500",
+    featured: true,
+    availableToday: 1,
+  },
+  {
+    id: "gtx-260-a",
+    brand: "Sea-Doo",
+    model: "260 GTX Limited Supercharged",
+    tagline: "Family-ready power.",
+    badge: "2026 · Supercharged",
+    image: "https://images.unsplash.com/photo-1625194398019-62a5362c1e52?w=1400&q=85&auto=format&fit=crop",
+    accent: "#00b3a7",
+    availableToday: 1,
+  },
+  {
+    id: "gtx-260-b",
+    brand: "Sea-Doo",
+    model: "260 GTX Limited Supercharged",
+    tagline: "Twin setup, full comfort.",
+    badge: "2026 · Supercharged",
+    image: "https://images.unsplash.com/photo-1595351298020-038700609878?w=1400&q=85&auto=format&fit=crop",
+    accent: "#4fb3bf",
+    availableToday: 1,
+  },
+  {
+    id: "rxt-riva",
+    brand: "Sea-Doo",
+    model: "260 RXT RS Riva Racing Supercharged",
+    tagline: "Race-tuned edge.",
+    badge: "2026 · Supercharged · Race-tuned",
+    image: "https://images.unsplash.com/photo-1625194398019-62a5362c1e52?w=1400&q=85&auto=format&fit=crop",
+    accent: "#b8925a",
+    availableToday: 1,
+  },
+];
+
 export const jetskis: Jetski[] = [
   {
     id: "seadoo-rxtx",
