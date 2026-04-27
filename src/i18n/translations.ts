@@ -3,6 +3,7 @@ export type Lang = "en" | "de" | "el";
 export interface T {
   nav: {
     fleet: string;
+    tours: string;
     how: string;
     voices: string;
     faq: string;
@@ -66,6 +67,16 @@ export interface T {
     h2Line1: string;
     h2Line2: string;
     items: Array<{ q: string; a: string }>;
+  };
+  tours: {
+    eyebrow: string;
+    h2Line1: string;
+    h2Line2: string;
+    withGuide: string;
+    noLicense: string;
+    priceLabel: string;
+    ctaBtn: string;
+    perfectFor: string;
   };
   cta: {
     eyebrow: string;
@@ -131,6 +142,7 @@ const translations: Record<Lang, T> = {
   en: {
     nav: {
       fleet: "Fleet",
+      tours: "Tours",
       how: "How",
       voices: "Voices",
       faq: "FAQ",
@@ -212,6 +224,16 @@ const translations: Record<Lang, T> = {
         { q: "How far can I ride?", a: "Greek Coast Guard rules: max 700m from shore, never inside swim buoys. Plenty of bays within that range." },
       ],
     },
+    tours: {
+      eyebrow: "Guided tours · With David",
+      h2Line1: "Not ready to",
+      h2Line2: "ride alone?",
+      withGuide: "With David · Licensed guide",
+      noLicense: "No license needed",
+      priceLabel: "Price on request — we reply within 2 hours",
+      ctaBtn: "Book a tour on WhatsApp",
+      perfectFor: "Perfect for",
+    },
     cta: {
       eyebrow: "Your summer starts here",
       h2: "See you on the water.",
@@ -267,6 +289,7 @@ const translations: Record<Lang, T> = {
   de: {
     nav: {
       fleet: "Flotte",
+      tours: "Touren",
       how: "Ablauf",
       voices: "Stimmen",
       faq: "FAQ",
@@ -348,6 +371,16 @@ const translations: Record<Lang, T> = {
         { q: "Wie weit darf ich fahren?", a: "Griechische Küstenwache: max. 700 m vom Ufer, niemals in Schwimmbereichen. Viele Buchten liegen innerhalb dieser Grenzen." },
       ],
     },
+    tours: {
+      eyebrow: "Geführte Touren · Mit David",
+      h2Line1: "Noch nicht bereit",
+      h2Line2: "allein zu fahren?",
+      withGuide: "Mit David · Lizenzierter Guide",
+      noLicense: "Kein Führerschein nötig",
+      priceLabel: "Preis auf Anfrage — Antwort in unter 2 Stunden",
+      ctaBtn: "Tour per WhatsApp buchen",
+      perfectFor: "Perfekt für",
+    },
     cta: {
       eyebrow: "Dein Sommer beginnt hier",
       h2: "Bis auf dem Wasser.",
@@ -403,6 +436,7 @@ const translations: Record<Lang, T> = {
   el: {
     nav: {
       fleet: "Στόλος",
+      tours: "Εκδρομές",
       how: "Πώς",
       voices: "Φωνές",
       faq: "FAQ",
@@ -483,6 +517,16 @@ const translations: Record<Lang, T> = {
         { q: "Πού θα συναντηθούμε;", a: "GPS συντεταγμένες με την επιβεβαίωση κράτησης. Μαρίνα Νυδρίου, 10 λεπτά με τα πόδια από το χωριό. Δωρεάν χώρος στάθμευσης." },
         { q: "Πόσο μακριά μπορώ να πάω;", a: "Κανόνες Ελληνικού Λιμενικού: μέγιστο 700μ. από την ακτή, ποτέ μέσα σε ζώνες κολύμβησης. Πολλές παραλίες βρίσκονται εντός αυτών των ορίων." },
       ],
+    },
+    tours: {
+      eyebrow: "Ξεναγούμενες εκδρομές · Με τον David",
+      h2Line1: "Δεν είσαι έτοιμος",
+      h2Line2: "να οδηγήσεις μόνος;",
+      withGuide: "Με τον David · Αδειοδοτημένος οδηγός",
+      noLicense: "Δεν χρειάζεται δίπλωμα",
+      priceLabel: "Τιμή κατόπιν αιτήματος — απαντάμε σε 2 ώρες",
+      ctaBtn: "Κλείσε εκδρομή μέσω WhatsApp",
+      perfectFor: "Ιδανικό για",
     },
     cta: {
       eyebrow: "Το καλοκαίρι σου αρχίζει εδώ",
