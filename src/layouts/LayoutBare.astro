@@ -20,12 +20,6 @@ const {
 
 const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://jetski-lefkada-rentals.com").href;
 
-const hreflangUrls = {
-  en: "https://jetski-lefkada-rentals.com/",
-  de: "https://jetski-lefkada-rentals.com/de/",
-  el: "https://jetski-lefkada-rentals.com/el/",
-};
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -68,10 +62,8 @@ const jsonLd = {
     <link rel="canonical" href={canonical} />
 
     <!-- hreflang -->
-    <link rel="alternate" hreflang="en" href={hreflangUrls.en} />
-    <link rel="alternate" hreflang="de" href={hreflangUrls.de} />
-    <link rel="alternate" hreflang="el" href={hreflangUrls.el} />
-    <link rel="alternate" hreflang="x-default" href={hreflangUrls.en} />
+    <link rel="alternate" hreflang="en" href="https://jetski-lefkada-rentals.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://jetski-lefkada-rentals.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -81,7 +73,7 @@ const jsonLd = {
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content={lang === "de" ? "de_DE" : lang === "el" ? "el_GR" : "en_US"} />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Jetski Lefkada Rentals" />
 
     <!-- Twitter Card -->

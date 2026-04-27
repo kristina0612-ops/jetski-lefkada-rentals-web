@@ -16,12 +16,6 @@ const links = [
   { href: "#faq", label: t.nav.faq },
   { href: "#book", label: t.nav.book },
 ];
-
-const langLinks: Array<{ code: Lang; href: string }> = [
-  { code: "en", href: "/" },
-  { code: "de", href: "/de" },
-  { code: "el", href: "/el" },
-];
 ---
 
 <nav class="absolute top-0 left-0 right-0 z-40 pointer-events-none pt-20 lg:pt-24">
@@ -47,23 +41,6 @@ const langLinks: Array<{ code: Lang; href: string }> = [
           </a>
         ))
       }
-
-      <!-- Language switcher -->
-      <div class="flex items-center gap-1 ml-2 border-l pl-4" style="border-color: rgba(255,230,212,0.2);">
-        {langLinks.map(({ code, href }) => (
-          <a
-            href={href}
-            class="font-mono text-[10px] uppercase tracking-[0.16em] px-1.5 py-0.5 rounded transition-all duration-300"
-            style={lang === code
-              ? "color: #ff4420; background: rgba(255,68,32,0.15);"
-              : "color: rgba(255,230,212,0.45);"}
-            aria-label={`Switch to ${code.toUpperCase()}`}
-            aria-current={lang === code ? "true" : undefined}
-          >
-            {code.toUpperCase()}
-          </a>
-        ))}
-      </div>
     </div>
 
     <a href="#book" class="v3-btn !py-3 !px-5 !text-xs">
