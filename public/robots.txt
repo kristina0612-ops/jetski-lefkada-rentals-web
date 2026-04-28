@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jetski-lefkada-rentals.com/sitemap-index.xml
