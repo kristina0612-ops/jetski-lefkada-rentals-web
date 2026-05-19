@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Dream Escapes — Crafting journeys, creating joy. Hand-selected hotels, villas, cars and boats across the Mediterranean.">
+<meta name="description" content="Dream Escapes — Crafting journeys, creating joy. Hand-selected hotels, villas, cars and boats across Lefkada and the Ionian islands.">
 <title>Dream Escapes — Escape the Ordinary. Embrace the Exceptional.</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAFAF7'/%3E%3Cpath d='M16 5 L27 16 L16 27 L5 16 Z' fill='none' stroke='%23C6A769' stroke-width='1.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://dreamescapes.net">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -45,7 +45,6 @@
   img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; }
 
-  .display { font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: var(--tracking-display); }
   .editorial { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 300; }
   .sub-label {
     font-family: 'Inter', sans-serif;
@@ -93,35 +92,38 @@
     min-height: 100vh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     text-align: center;
-    padding: 6rem 2rem 4rem;
+    padding: 6rem 1.5rem 4rem;
     overflow: hidden;
     color: var(--paper);
+    background-color: var(--ink);
   }
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
-    background-image: url('https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=2400&q=80&auto=format&fit=crop');
+    background-image: url('https://dreamescapes.net/storage/2026/02/Lefkada-Pic-5-scaled.jpg');
     background-size: cover; background-position: center;
   }
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
     background:
-      linear-gradient(180deg, rgba(13,13,13,0.45) 0%, rgba(13,13,13,0.35) 40%, rgba(13,13,13,0.55) 100%),
-      radial-gradient(ellipse at center, rgba(198,167,105,0.15) 0%, transparent 60%);
+      linear-gradient(180deg, rgba(13,13,13,0.50) 0%, rgba(13,13,13,0.35) 40%, rgba(13,13,13,0.60) 100%),
+      radial-gradient(ellipse at center, rgba(198,167,105,0.18) 0%, transparent 60%);
   }
-  .hero-content { position: relative; z-index: 2; max-width: 50rem; }
+  .hero-content { position: relative; z-index: 2; max-width: 56rem; width: 100%; }
 
-  .hero-rule { width: 60px; height: 1px; background: var(--gold-light); margin: 0 auto 2.5rem; opacity: 0.7; }
+  .hero-rule { width: 60px; height: 1px; background: var(--gold-light); margin: 0 auto 2rem; opacity: 0.7; }
 
-  .wordmark { display: block; user-select: none; margin-bottom: 3rem; }
-  .wordmark-letters {
+  /* Two-line wordmark — fixes the v1 overflow bug */
+  .wordmark { display: block; user-select: none; margin-bottom: 2.5rem; }
+  .wordmark-line {
     font-family: 'Cinzel', serif; font-weight: 400;
-    font-size: clamp(3rem, 11vw, 7.5rem);
+    font-size: clamp(2.5rem, 8.5vw, 6rem);
     letter-spacing: 0.18em;
-    line-height: 1;
+    line-height: 1.05;
     padding-left: 0.18em;
     white-space: nowrap;
+    display: block;
   }
-  .wordmark-letters span {
+  .wordmark-line span {
     display: inline-block;
     background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 30%, var(--gold-bright) 50%, var(--gold) 70%, var(--gold-dark) 100%);
     background-size: 100% 250%;
@@ -134,21 +136,22 @@
     transform: translateY(20px);
     animation:
       letter-in 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards,
-      letter-shimmer 8s ease-in-out 1500ms infinite;
+      letter-shimmer 8s ease-in-out 2000ms infinite;
   }
-  .wordmark-letters span:nth-child(1) { animation-delay: 200ms, 1500ms; }
-  .wordmark-letters span:nth-child(2) { animation-delay: 320ms, 2000ms; }
-  .wordmark-letters span:nth-child(3) { animation-delay: 440ms, 2500ms; }
-  .wordmark-letters span:nth-child(4) { animation-delay: 560ms, 3000ms; }
-  .wordmark-letters span:nth-child(5) { animation-delay: 680ms, 3500ms; }
-  .wordmark-letters span:nth-child(6) { animation-delay: 800ms, 4000ms; }
-  .wordmark-letters span:nth-child(7) { animation-delay: 920ms, 4500ms; }
-  .wordmark-letters span:nth-child(8) { animation-delay: 1040ms, 5000ms; }
-  .wordmark-letters span:nth-child(9) { animation-delay: 1160ms, 5500ms; }
-  .wordmark-letters span:nth-child(10) { animation-delay: 1280ms, 6000ms; }
-  .wordmark-letters span:nth-child(11) { animation-delay: 1400ms, 6500ms; }
-  .wordmark-letters span:nth-child(12) { animation-delay: 1520ms, 7000ms; }
-  .wordmark-letters span:nth-child(13) { animation-delay: 1640ms, 7500ms; }
+  /* Line 1 "DREAM" — 5 letters, delays 200..680 */
+  .wordmark-line-1 span:nth-child(1) { animation-delay: 200ms, 2000ms; }
+  .wordmark-line-1 span:nth-child(2) { animation-delay: 320ms, 2300ms; }
+  .wordmark-line-1 span:nth-child(3) { animation-delay: 440ms, 2600ms; }
+  .wordmark-line-1 span:nth-child(4) { animation-delay: 560ms, 2900ms; }
+  .wordmark-line-1 span:nth-child(5) { animation-delay: 680ms, 3200ms; }
+  /* Line 2 "ESCAPES" — 7 letters, delays 900..1620 */
+  .wordmark-line-2 span:nth-child(1) { animation-delay: 900ms, 3500ms; }
+  .wordmark-line-2 span:nth-child(2) { animation-delay: 1020ms, 3800ms; }
+  .wordmark-line-2 span:nth-child(3) { animation-delay: 1140ms, 4100ms; }
+  .wordmark-line-2 span:nth-child(4) { animation-delay: 1260ms, 4400ms; }
+  .wordmark-line-2 span:nth-child(5) { animation-delay: 1380ms, 4700ms; }
+  .wordmark-line-2 span:nth-child(6) { animation-delay: 1500ms, 5000ms; }
+  .wordmark-line-2 span:nth-child(7) { animation-delay: 1620ms, 5300ms; }
 
   @keyframes letter-in {
     0% { opacity: 0; transform: translateY(20px); }
@@ -168,10 +171,10 @@
     text-transform: uppercase;
     color: var(--gold-light);
     text-align: center;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     padding-left: 0.55em;
     opacity: 0;
-    animation: sublabel-in 1200ms ease-out 1800ms forwards;
+    animation: sublabel-in 1200ms ease-out 1900ms forwards;
   }
   @keyframes sublabel-in {
     0% { opacity: 0; letter-spacing: 0.3em; }
@@ -181,15 +184,15 @@
   .hero-line {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.3;
+    letter-spacing: 0.04em;
     color: var(--paper);
     opacity: 0; transform: translateY(14px);
     animation: line-in 1000ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
-  .hero-line-1 { animation-delay: 2400ms; }
-  .hero-line-2 { margin-top: 0.4rem; animation-delay: 2650ms; }
+  .hero-line-1 { animation-delay: 2500ms; }
+  .hero-line-2 { margin-top: 0.4rem; animation-delay: 2750ms; }
   .hero-tagline {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic; font-weight: 300;
@@ -197,7 +200,7 @@
     color: var(--gold-light);
     margin-top: 1.5rem;
     opacity: 0; transform: translateY(14px);
-    animation: line-in 1000ms cubic-bezier(0.22, 1, 0.36, 1) 2900ms forwards;
+    animation: line-in 1000ms cubic-bezier(0.22, 1, 0.36, 1) 3000ms forwards;
   }
   @keyframes line-in { to { opacity: 1; transform: translateY(0); } }
 
@@ -223,11 +226,11 @@
   .cta-secondary:hover { background: var(--ink); color: var(--paper); }
 
   .hero-cta {
-    margin-top: 3rem;
+    margin-top: 2.75rem;
     opacity: 0; transform: translateY(14px);
     animation:
-      line-in 1000ms cubic-bezier(0.22, 1, 0.36, 1) 3200ms forwards,
-      cta-pulse 4.5s ease-in-out 4500ms infinite;
+      line-in 1000ms cubic-bezier(0.22, 1, 0.36, 1) 3300ms forwards,
+      cta-pulse 4.5s ease-in-out 4600ms infinite;
   }
   @keyframes cta-pulse {
     0%, 100% { box-shadow: 0 4px 14px rgba(198, 167, 105, 0.25); }
@@ -246,7 +249,7 @@
     50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
   }
 
-  /* ────────── SECTION BASE + REVEAL ────────── */
+  /* ────────── SECTIONS ────────── */
   section.block { padding: 8rem 0; position: relative; }
   section.block + section.block { border-top: 1px solid var(--hairline); }
 
@@ -260,27 +263,28 @@
   }
   h2.section-title em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; color: var(--gold-dark); letter-spacing: 0; }
   .lead { font-size: 1.075rem; color: var(--ink-soft); line-height: 1.85; margin-top: 1.5rem; }
+  .lead + .lead { margin-top: 1.25rem; }
 
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1000ms ease, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
-  /* ────────── PROMISE ────────── */
+  /* ────────── PROMISE / ABOUT ────────── */
   .promise { text-align: center; }
   .promise .prose { padding: 0 1rem; }
 
-  /* ────────── SERVICE TILE (Stay / Move) ────────── */
+  /* ────────── SERVICE TILE ────────── */
   .service {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
   }
-  .service-reverse { grid-template-columns: 1fr 1fr; }
   .service-img {
     position: relative;
     aspect-ratio: 4 / 5;
     overflow: hidden;
     border-radius: 2px;
+    background: var(--paper-soft);
   }
   .service-img img {
     width: 100%; height: 100%; object-fit: cover;
@@ -296,55 +300,151 @@
   }
 
   .service-text h2 { margin-bottom: 1.5rem; }
-  .service-text ul { list-style: none; margin: 2rem 0; }
-  .service-text li {
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--hairline);
-    display: flex; align-items: baseline; gap: 1rem;
-    font-size: 0.97rem; color: var(--ink-soft);
-  }
-  .service-text li::before {
-    content: '';
-    width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    flex-shrink: 0;
-    transform: translateY(2px);
-  }
-  .service-text li:last-child { border-bottom: none; }
-  .service-text .cta { margin-top: 1.5rem; }
+  .service-text .lead { margin-top: 1.25rem; }
+  .service-text .cta { margin-top: 2rem; }
 
   @media (max-width: 860px) {
     .service { grid-template-columns: 1fr; gap: 2.5rem; }
-    .service-reverse .service-img { order: -1; }
   }
 
-  /* ────────── CURATOR / TRUST ────────── */
-  .curator { text-align: center; }
-  .curator-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-weight: 300;
-    font-size: clamp(1.4rem, 2.8vw, 2rem);
-    line-height: 1.5;
+  /* ────────── PARTNERS GRID ────────── */
+  .partners-block { padding-top: 0; }
+  .partners-head { text-align: center; margin-bottom: 3.5rem; }
+  .partners-head h3 {
+    font-family: 'Cinzel', serif; font-weight: 400;
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    letter-spacing: 0.1em;
     color: var(--ink);
-    margin: 2.5rem auto;
-    max-width: 38rem;
   }
-  .curator-quote::before, .curator-quote::after {
-    content: '"';
-    color: var(--gold);
-    font-size: 1.5em;
-    line-height: 0;
+  .partners-head h3 em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; color: var(--gold-dark); letter-spacing: 0; }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .partner-card {
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    transition: border-color 400ms ease, transform 400ms ease, box-shadow 400ms ease;
+    display: flex; flex-direction: column;
+  }
+  .partner-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(198, 167, 105, 0.12); }
+  .partner-card-media {
+    aspect-ratio: 4 / 3;
+    background: var(--paper-soft);
+    overflow: hidden;
     position: relative;
-    top: 0.2em;
+    display: flex; align-items: center; justify-content: center;
   }
-  .curator-quote::before { margin-right: 0.15em; }
-  .curator-quote::after { margin-left: 0.05em; }
-  .curator-signature {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1rem;
+  .partner-card-media img { width: 100%; height: 100%; object-fit: cover; }
+  .partner-card-media img.logo { width: 65%; height: auto; object-fit: contain; aspect-ratio: auto; }
+  .partner-card-media.typographic {
+    background: linear-gradient(135deg, var(--paper) 0%, var(--paper-soft) 100%);
+  }
+  .partner-card-media.typographic::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 2rem;
+    opacity: 0.5;
+  }
+  .partner-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex; flex-direction: column; justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .partner-card-name {
+    font-family: 'Cinzel', serif; font-weight: 400;
+    font-size: 1rem; letter-spacing: 0.1em;
+    color: var(--ink);
+  }
+  .partner-card-link {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
     color: var(--gold-dark);
+    transition: color 300ms ease;
+  }
+  .partner-card-link:hover { color: var(--gold); }
+
+  /* USP strip */
+  .usp-strip {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    text-align: center;
+    border-top: 1px solid var(--hairline);
+    padding-top: 3rem;
+  }
+  .usp-item .label {
+    font-family: 'Cinzel', serif; font-weight: 400;
+    font-size: 0.85rem; letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 0.5rem;
+  }
+  .usp-item .text { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; }
+  @media (max-width: 720px) {
+    .usp-strip { grid-template-columns: 1fr; gap: 1.75rem; padding-top: 2.5rem; }
+  }
+
+  /* ────────── MOVE GRID ────────── */
+  .move-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .move-card {
+    border: 1px solid var(--hairline);
+    transition: border-color 400ms ease, transform 400ms ease;
+    background: var(--paper);
+  }
+  .move-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .move-card-img {
+    aspect-ratio: 16 / 10;
+    background: var(--paper-soft);
+    overflow: hidden;
+  }
+  .move-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .move-card-body {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex; flex-direction: column; gap: 0.25rem;
+  }
+  .move-card-group { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-dark); }
+  .move-card-name { font-family: 'Cinzel', serif; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.08em; color: var(--ink); }
+
+  .boats-feature {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    border-top: 1px solid var(--hairline);
+    padding-top: 4rem;
+  }
+  .boats-feature-img {
+    aspect-ratio: 1 / 1;
+    max-width: 320px;
+    margin: 0 auto;
+    background: var(--paper-soft);
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+  }
+  .boats-feature-img::after {
+    content: ''; position: absolute; inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    transform: scale(1.06);
+    opacity: 0.5;
+  }
+  .boats-feature-img img { width: 100%; height: 100%; object-fit: cover; }
+  .boats-feature-text .partner-card-name { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  @media (max-width: 720px) {
+    .boats-feature { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
   }
 
   /* ────────── CONTACT ────────── */
@@ -356,12 +456,18 @@
     display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
   }
   .contact-info {
-    margin-top: 3rem;
-    display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
-    font-size: 0.85rem; color: var(--ink-soft);
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 48rem;
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
   }
-  .contact-info span { display: block; }
-  .contact-info .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--gold-dark); margin-bottom: 0.4rem; }
+  .contact-info .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--gold-dark); margin-bottom: 0.5rem; display: block; }
+  .contact-info a:hover { color: var(--gold); }
 
   /* ────────── FOOTER ────────── */
   footer {
@@ -394,7 +500,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-    .wordmark-letters span, .hero-line, .hero-tagline, .hero-cta { opacity: 1; transform: none; }
+    .wordmark-line span, .hero-line, .hero-tagline, .hero-cta { opacity: 1; transform: none; }
     .reveal { opacity: 1; transform: none; }
   }
 </style>
@@ -419,9 +525,10 @@
     <div class="hero-rule" aria-hidden="true"></div>
 
     <div class="wordmark" role="img" aria-label="Dream Escapes">
-      <div class="wordmark-letters" aria-hidden="true">
+      <div class="wordmark-line wordmark-line-1" aria-hidden="true">
         <span>D</span><span>R</span><span>E</span><span>A</span><span>M</span>
-        <span>&nbsp;</span>
+      </div>
+      <div class="wordmark-line wordmark-line-2" aria-hidden="true">
         <span>E</span><span>S</span><span>C</span><span>A</span><span>P</span><span>E</span><span>S</span>
       </div>
       <span class="wordmark-sublabel">Adventures</span>
@@ -436,15 +543,17 @@
   <div class="hero-scroll" aria-hidden="true">Scroll</div>
 </section>
 
-<!-- ════════════════════════ PROMISE ════════════════════════ -->
-<section class="block promise">
+<!-- ════════════════════════ PROMISE / ABOUT ════════════════════════ -->
+<section class="block promise" id="about">
   <div class="container">
     <div class="prose reveal">
-      <p class="sub-label eyebrow">— Our promise</p>
-      <h2 class="section-title">Not a catalogue.<br><em>A conversation.</em></h2>
+      <p class="sub-label eyebrow">— Founded in 2026 · Rooted in Lefkada</p>
+      <h2 class="section-title">Lefkada,<br><em>and far beyond.</em></h2>
       <p class="lead">
-        We don't sell trips. We compose them — one stay, one route, one breakfast view at a time.
-        Each escape is shaped around a single question: <em>what would make this unforgettable for you?</em>
+        Born on the Ionian, Dream Escapes is your hyper-local gateway to Lefkada and the surrounding islands — from the secluded coves of <em>Porto Katsiki</em> and the windswept beauty of <em>Vassiliki Beach</em>, to truffle hunts in <em>Karia</em> and quiet hours at the <em>Faneromeni Monastery</em>.
+      </p>
+      <p class="lead">
+        Modern luxury — yes. But with intention: wellness, restoration, and meaningful experiences. Including private yacht charters to <em>Skorpios</em> and <em>Meganisi</em>.
       </p>
     </div>
   </div>
@@ -455,18 +564,86 @@
   <div class="container">
     <div class="service">
       <div class="service-img reveal">
-        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1400&q=80&auto=format&fit=crop" alt="Pool-side terrace at a Mediterranean villa at golden hour" loading="lazy">
+        <img src="https://dreamescapes.net/storage/2026/02/Porto-Galini.jpg" alt="Porto Galini — one of Dream Escapes' hand-selected Ionian properties" loading="lazy">
       </div>
       <div class="service-text reveal">
         <p class="sub-label eyebrow">— Stay</p>
         <h2 class="section-title">Hotels &amp; villas,<br><em>hand-selected.</em></h2>
-        <p class="lead">From a quiet boutique above the harbour to a private estate with its own jetty — every address is visited, vetted, and only kept on our list as long as it deserves to be.</p>
-        <ul>
-          <li>Curated by region, not by star rating</li>
-          <li>From boutique hideaway to private estate</li>
-          <li>Personal concierge from arrival to departure</li>
-        </ul>
-        <a href="#contact" class="cta cta-secondary">Explore stays <span aria-hidden="true">→</span></a>
+        <p class="lead">Five trusted addresses across Lefkada and the Ionian — each visited, vetted, and quietly kept on our list as long as they earn their place. From boutique hideaways above the harbour to private estates with their own jetty.</p>
+        <a href="#partners" class="cta cta-secondary">Meet our partners <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ STAY PARTNERS ════════════════════════ -->
+<section class="block partners-block" id="partners">
+  <div class="container">
+    <div class="partners-head reveal">
+      <p class="sub-label eyebrow">— Our Collection</p>
+      <h3>Five places we'd<br><em>send our own family to.</em></h3>
+    </div>
+
+    <div class="partners-grid reveal">
+      <a href="https://portogalini.gr" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-card-media">
+          <img src="https://dreamescapes.net/storage/2026/02/Porto-Galini.jpg" alt="Porto Galini" loading="lazy">
+        </div>
+        <div class="partner-card-body">
+          <span class="partner-card-name">Porto Galini</span>
+          <span class="partner-card-link">portogalini.gr →</span>
+        </div>
+      </a>
+
+      <a href="https://ionianblue.gr" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-card-media">
+          <img src="https://dreamescapes.net/storage/2026/02/Ionian-Blue.jpg" alt="Ionian Blue" loading="lazy">
+        </div>
+        <div class="partner-card-body">
+          <span class="partner-card-name">Ionian Blue</span>
+          <span class="partner-card-link">ionianblue.gr →</span>
+        </div>
+      </a>
+
+      <a href="https://pomariaboutiqueresidences.gr" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-card-media">
+          <img class="logo" src="https://dreamescapes.net/storage/2026/02/Pomaria-Boutique-Residences-logo.png" alt="Pomaria Boutique Residences" loading="lazy">
+        </div>
+        <div class="partner-card-body">
+          <span class="partner-card-name">Pomaria Boutique</span>
+          <span class="partner-card-link">pomariaboutiqueresidences.gr →</span>
+        </div>
+      </a>
+
+      <a href="https://albagiorno.gr" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-card-media typographic" aria-hidden="true"></div>
+        <div class="partner-card-body">
+          <span class="partner-card-name">Alba Giorno</span>
+          <span class="partner-card-link">albagiorno.gr →</span>
+        </div>
+      </a>
+
+      <a href="https://rizomatavillas.com" target="_blank" rel="noopener" class="partner-card">
+        <div class="partner-card-media typographic" aria-hidden="true"></div>
+        <div class="partner-card-body">
+          <span class="partner-card-name">Rizomata Villas</span>
+          <span class="partner-card-link">rizomatavillas.com →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="usp-strip reveal">
+      <div class="usp-item">
+        <p class="label">Total Privacy</p>
+        <p class="text">Private pools and gardens for an intimate experience.</p>
+      </div>
+      <div class="usp-item">
+        <p class="label">Flexibility</p>
+        <p class="text">Self-catering or half-board — your choice, your rhythm.</p>
+      </div>
+      <div class="usp-item">
+        <p class="label">Best Value</p>
+        <p class="text">Exclusive Last Minute and Early Bird discounts.</p>
       </div>
     </div>
   </div>
@@ -475,33 +652,52 @@
 <!-- ════════════════════════ MOVE ════════════════════════ -->
 <section class="block" id="move">
   <div class="container">
-    <div class="service service-reverse">
-      <div class="service-text reveal">
-        <p class="sub-label eyebrow">— Move</p>
-        <h2 class="section-title">Cars &amp; boats,<br><em>delivered to you.</em></h2>
-        <p class="lead">A convertible at your hotel by ten. A yacht waiting at the marina at noon. We arrange the keys; you arrange the day.</p>
-        <ul>
-          <li>Premium fleet, professionally maintained</li>
-          <li>Door-to-door, port-to-villa delivery</li>
-          <li>Skipper or self-drive — your call</li>
-        </ul>
-        <a href="#contact" class="cta cta-secondary">Explore rentals <span aria-hidden="true">→</span></a>
+    <div class="prose reveal" style="text-align: center;">
+      <p class="sub-label eyebrow">— Move</p>
+      <h2 class="section-title">Cars &amp; boats,<br><em>delivered to you.</em></h2>
+      <p class="lead">We have partnered with exclusive car and boat rental companies in order to offer an exceptional service at affordable prices. Four car groups, one trusted boat partner — all delivered, all keys in your hand.</p>
+    </div>
+
+    <div class="move-grid reveal">
+      <div class="move-card">
+        <div class="move-card-img"><img src="https://dreamescapes.net/storage/2026/02/Group-E-Mercedes-Benz-.jpg" alt="Group E — Mercedes-Benz" loading="lazy"></div>
+        <div class="move-card-body">
+          <span class="move-card-group">Group E</span>
+          <span class="move-card-name">Mercedes-Benz</span>
+        </div>
       </div>
-      <div class="service-img reveal">
-        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1400&q=80&auto=format&fit=crop" alt="Luxury yacht anchored in turquoise Mediterranean water" loading="lazy">
+      <div class="move-card">
+        <div class="move-card-img"><img src="https://dreamescapes.net/storage/2026/02/Group-D-opel-astra-.jpg" alt="Group D — Opel Astra" loading="lazy"></div>
+        <div class="move-card-body">
+          <span class="move-card-group">Group D</span>
+          <span class="move-card-name">Opel Astra</span>
+        </div>
+      </div>
+      <div class="move-card">
+        <div class="move-card-img"><img src="https://dreamescapes.net/storage/2026/02/Group-B-peugeot-208.jpg" alt="Group B — Peugeot 208" loading="lazy"></div>
+        <div class="move-card-body">
+          <span class="move-card-group">Group B</span>
+          <span class="move-card-name">Peugeot 208</span>
+        </div>
+      </div>
+      <div class="move-card">
+        <div class="move-card-img"><img src="https://dreamescapes.net/storage/2026/02/Group-A-Citroen-C1.jpg" alt="Group A — Citroën C1" loading="lazy"></div>
+        <div class="move-card-body">
+          <span class="move-card-group">Group A</span>
+          <span class="move-card-name">Citroën C1</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ════════════════════════ CURATOR / ABOUT ════════════════════════ -->
-<section class="block curator" id="about">
-  <div class="container">
-    <div class="prose reveal">
-      <p class="sub-label eyebrow">— Your travel curator</p>
-      <h2 class="section-title">Behind every escape,<br><em>one careful eye.</em></h2>
-      <p class="curator-quote">From the first message to your safe return, you'll work with one person who knows your story, remembers your preferences, and answers in hours — not in days.</p>
-      <p class="curator-signature">— Dream Escapes Adventures</p>
+    <div class="boats-feature reveal">
+      <div class="boats-feature-img">
+        <img src="https://dreamescapes.net/storage/2026/02/OceanHighwayRentals-300-300.jpg" alt="Ocean Highway Rentals" loading="lazy">
+      </div>
+      <div class="boats-feature-text">
+        <p class="sub-label eyebrow">— On the Water</p>
+        <span class="partner-card-name">Ocean Highway Rentals</span>
+        <p class="lead">Our boat partner of choice — for half-day cruises, full-day escapes, and quiet routes only the locals know. Skipper available on request.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -515,19 +711,25 @@
       <p class="lead">Tell us when, where, and what kind of feeling you're after. We'll come back within the day with a first sketch of your escape.</p>
 
       <div class="contact-row">
-        <a href="mailto:hello@dreamescapes.net" class="cta">Write to us <span aria-hidden="true">→</span></a>
-        <a href="#" class="cta cta-secondary">WhatsApp <span aria-hidden="true">→</span></a>
+        <a href="mailto:info@dreamescapes.net" class="cta">Write to us <span aria-hidden="true">→</span></a>
+        <a href="https://wa.me/306947685192" target="_blank" rel="noopener" class="cta cta-secondary">WhatsApp <span aria-hidden="true">→</span></a>
       </div>
 
       <div class="contact-info">
-        <span>
+        <div>
           <span class="label">Email</span>
-          hello@dreamescapes.net
-        </span>
-        <span>
-          <span class="label">Hours</span>
-          Mon — Sat · 09:00 — 19:00
-        </span>
+          <a href="mailto:info@dreamescapes.net">info@dreamescapes.net</a>
+        </div>
+        <div>
+          <span class="label">Phone</span>
+          +30 26450 20176<br>
+          <a href="tel:+306947685192">+30 6947 685 192</a>
+        </div>
+        <div>
+          <span class="label">Find us</span>
+          Ioannou Gazi 17<br>
+          Lefkada 31100 · Greece
+        </div>
       </div>
     </div>
   </div>
@@ -539,7 +741,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">Dream Escapes</div>
-        <div class="footer-brand-sub">Adventures</div>
+        <div class="footer-brand-sub">Adventures · Lefkada</div>
       </div>
       <div class="footer-links">
         <a href="#stay">Stay</a>
