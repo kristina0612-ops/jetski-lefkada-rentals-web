@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Website Improvement Proposal — Dream Escapes</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff5a36'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='18' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'%3EN%3C/text%3E%3C/svg%3E">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap');
+  :root { --ink: #0a1220; --paper: #fdfbf4; --coral: #ff5a36; --sun: #ffc233; --turq: #00b3a7; --muted: #6b7a8d; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.7; font-size: 17px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 3rem 2rem; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; letter-spacing: -0.03em; }
+  h1 { font-size: 3rem; line-height: 1.05; margin-bottom: 1.5rem; }
+  h2 { font-size: 1.8rem; line-height: 1.15; margin: 3rem 0 1rem; }
+  h3 { font-size: 1.3rem; margin: 2rem 0 0.75rem; }
+  h1 em, h2 em { font-style: italic; font-weight: 300; color: var(--coral); }
+  p { margin-bottom: 1rem; color: #2a3a4a; }
+  .eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--turq); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--turq); }
+  .divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--coral), var(--sun)); margin: 2.5rem 0; border-radius: 2px; }
+
+  .lead { font-size: 1.15rem; max-width: 580px; color: #2a3a4a; }
+  .lead + .lead { margin-top: 1rem; }
+
+  .can-card {
+    display: flex; gap: 1.25rem; align-items: flex-start; margin: 1.25rem 0;
+    padding: 1.25rem 1.5rem; background: white; border: 1.5px solid var(--ink);
+    border-radius: 16px; transition: transform 0.3s ease;
+  }
+  .can-card:hover { transform: translateY(-3px); box-shadow: 4px 4px 0 var(--ink); }
+  .can-icon { font-size: 2rem; min-width: 44px; text-align: center; line-height: 1.2; }
+  .can-card h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+  .can-card p { font-size: 0.95rem; margin: 0.4rem 0 0; color: #2a3a4a; }
+  .can-card .suggestion { font-size: 0.85rem; margin-top: 0.6rem; padding: 0.55rem 0.8rem; background: #f0f7f6; border-left: 3px solid var(--turq); border-radius: 6px; color: var(--ink); }
+  .can-card .suggestion strong { color: var(--turq); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.2rem; }
+
+  .coral-box { background: #fff0ec; border-left: 4px solid var(--coral); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; }
+  .coral-box p:last-child { margin-bottom: 0; }
+
+  .contact-card {
+    margin-top: 2.5rem; padding: 1.75rem; background: var(--ink); color: var(--paper);
+    border-radius: 16px;
+  }
+  .contact-card h3 { color: var(--paper); margin: 0 0 0.5rem; font-size: 1.4rem; }
+  .contact-card p { color: rgba(253,251,244,0.85); font-size: 0.95rem; margin: 0.3rem 0; }
+  .contact-card a { color: var(--sun); text-decoration: none; font-weight: 600; }
+  .contact-card a:hover { text-decoration: underline; }
+  .contact-card .name { font-weight: 600; color: var(--paper); }
+
+  .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e8e4da; font-size: 0.75rem; color: var(--muted); text-align: center; }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 2rem 1.25rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.5rem; }
+    .can-card { padding: 1rem 1.1rem; gap: 0.9rem; }
+    .can-icon { font-size: 1.6rem; min-width: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="eyebrow"><span>Nobrainer AI · Website Improvement Proposal</span></div>
+
+<h1>Make your website<br><em>as exceptional as your journeys.</em></h1>
+
+<p class="lead">
+  Dream Escapes already speaks beautifully to a premium traveler — the brand,
+  the tagline, the promise of the extraordinary. A few focused refinements would
+  help that promise convert more visitors into inquiries.
+</p>
+
+<p class="lead">
+  Below are six concrete ideas, ranked roughly by impact. Nothing here requires
+  a redesign — most are surgical changes that protect what you already have.
+</p>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ THE 6 POINTS ═══════════════ -->
+<h2>Six small shifts, <em>real results.</em></h2>
+
+<div class="can-card">
+  <div class="can-icon">🎯</div>
+  <div>
+    <h3>1. A hero that points somewhere</h3>
+    <p>The hero ends on a beautiful tagline, but offers the visitor no next step. The eye lands, admires — and scrolls away.</p>
+    <div class="suggestion">
+      <strong>Suggested</strong>
+      Add one clear primary button in the hero: <em>"Plan Your Escape"</em> or <em>"Browse Villas"</em> — pointing to your strongest section.
+    </div>
+  </div>
+</div>
+
+<div class="can-card">
+  <div class="can-icon">🍪</div>
+  <div>
+    <h3>2. A lighter cookie consent</h3>
+    <p>The current consent banner is large and covers the most valuable real estate on the page — the first impression. Premium visitors decide in seconds.</p>
+    <div class="suggestion">
+      <strong>Suggested</strong>
+      Switch to a slimmer banner (bottom strip, single accept + settings link) that leaves the hero fully visible.
+    </div>
+  </div>
+</div>
+
+<div class="can-card">
+  <div class="can-icon">💬</div>
+  <div>
+    <h3>3. A visible inquiry path on every section</h3>
+    <p>Right now there is no recurring call-to-action between sections. Once a visitor scrolls past the menu, they have no obvious way back to "talk to us".</p>
+    <div class="suggestion">
+      <strong>Suggested</strong>
+      A small, recurring <em>"Get in touch"</em> button or sticky WhatsApp link — present but never intrusive.
+    </div>
+  </div>
+</div>
+
+<div class="can-card">
+  <div class="can-icon">⚡</div>
+  <div>
+    <h3>4. Faster mobile experience</h3>
+    <p>Most luxury-travel research starts on a phone. Image weight, font loading, and unused scripts are the usual culprits — and all fixable without touching the design.</p>
+    <div class="suggestion">
+      <strong>Suggested</strong>
+      Compress hero imagery, defer non-critical scripts, and load fonts strategically. Visitors stay longer.
+    </div>
+  </div>
+</div>
+
+<div class="can-card">
+  <div class="can-icon">👤</div>
+  <div>
+    <h3>5. Show the people behind the brand</h3>
+    <p>Premium travel is bought on trust. Visitors want to know <em>who</em> is crafting their journey before they share their dates and budget.</p>
+    <div class="suggestion">
+      <strong>Suggested</strong>
+      A short "Meet your travel curator" section — a real photo, two or three sentences, one line of credentials.
+    </div>
+  </div>
+</div>
+
+<div class="can-card">
+  <div class="can-icon">🧭</div>
+  <div>
+    <h3>6. Stronger separation of services</h3>
+    <p>Hotel &amp; Villa Collections and Car &amp; Boat Rental currently compete in the same visual lane. Each deserves its own clear entry point.</p>
+    <div class="suggestion">
+      <strong>Suggested</strong>
+      Two distinct service tiles directly under the hero — one for <em>Stay</em>, one for <em>Move</em>. The visitor self-selects instantly.
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="coral-box">
+  <p><strong>This is a starting point</strong> — not a finished proposal. Every point above can be scoped, prioritized, or skipped depending on what matters most for the coming season. Happy to walk through it together.</p>
+</div>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<div class="contact-card">
+  <h3>Let's talk it through.</h3>
+  <p class="name">Daniel Peric · Nobrainer AI</p>
+  <p>WhatsApp: <a href="https://wa.me/436605221149">+43 660 522 11 49</a></p>
+  <p>Email: <a href="mailto:info@nobrainer-ai.at">info@nobrainer-ai.at</a></p>
+</div>
+
+<div class="footer">
+  Draft proposal · Independently prepared by Nobrainer AI · Not affiliated with Dream Escapes Adventures.
+</div>
+
+</div>
+</body>
+</html>
